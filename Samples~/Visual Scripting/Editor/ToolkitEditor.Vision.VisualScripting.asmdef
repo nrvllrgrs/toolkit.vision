@@ -1,0 +1,21 @@
+{
+    "name": "ToolkitEditor.Vision.VisualScripting",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7332b21174ae0c74fbcf70dff5d9d236",
+        "GUID:3f1f571dedb44f84b9692faef46a67d8",
+        "GUID:54cb1906aeb4e4264bc1d2aa3818a43f",
+        "GUID:23f3c6063e13e4fd9addce3606ff4e42"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
