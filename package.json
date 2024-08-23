@@ -1,0 +1,12 @@
+{
+	"name": "com.toolkit.vision",
+	"displayName": "Vision Toolkit",
+	"version": "1.0.0",
+	"unity": "2019.4",
+	"description": "A set components for vision modes.",
+	"keywords": [
+		"toolkit"
+	],
+	"category": "Toolkit",
+	"dependencies": { }
+}
