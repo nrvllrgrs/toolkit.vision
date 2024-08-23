@@ -1,0 +1,122 @@
+{
+  "api/ToolkitEditor.Vision.VisionCategoryControlEditor.html": {
+    "href": "api/ToolkitEditor.Vision.VisionCategoryControlEditor.html",
+    "title": "Class VisionCategoryControlEditor | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionCategoryControlEditor Namespace ToolkitEditor.Vision public class VisionCategoryControlEditor : BaseToolkitEditor Inheritance object VisionCategoryControlEditor Fields m_category protected SerializedProperty m_category Field Value SerializedProperty m_ignoredRenderers protected SerializedProperty m_ignoredRenderers Field Value SerializedProperty m_onChanged protected SerializedProperty m_onChanged Field Value SerializedProperty Methods DrawEvents() protected override void DrawEvents() DrawProperties() protected override void DrawProperties()"
+  },
+  "api/ToolkitEditor.Vision.VisionCategoryEditor.html": {
+    "href": "api/ToolkitEditor.Vision.VisionCategoryEditor.html",
+    "title": "Class VisionCategoryEditor | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionCategoryEditor Namespace ToolkitEditor.Vision public class VisionCategoryEditor : BaseToolkitEditor Inheritance object VisionCategoryEditor Fields m_materials protected SerializedProperty m_materials Field Value SerializedProperty m_renderType protected SerializedProperty m_renderType Field Value SerializedProperty Methods DrawProperties() protected override void DrawProperties()"
+  },
+  "api/ToolkitEditor.Vision.VisualScripting.Setup.html": {
+    "href": "api/ToolkitEditor.Vision.VisualScripting.Setup.html",
+    "title": "Class Setup | Vision Toolkit | 1.0.0",
+    "keywords": "Class Setup Namespace ToolkitEditor.Vision.VisualScripting public static class Setup Inheritance object Setup Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString()"
+  },
+  "api/ToolkitEditor.Vision.VisualScripting.html": {
+    "href": "api/ToolkitEditor.Vision.VisualScripting.html",
+    "title": "Namespace ToolkitEditor.Vision.VisualScripting | Vision Toolkit | 1.0.0",
+    "keywords": "Namespace ToolkitEditor.Vision.VisualScripting Classes Setup"
+  },
+  "api/ToolkitEditor.Vision.html": {
+    "href": "api/ToolkitEditor.Vision.html",
+    "title": "Namespace ToolkitEditor.Vision | Vision Toolkit | 1.0.0",
+    "keywords": "Namespace ToolkitEditor.Vision Classes VisionCategoryControlEditor VisionCategoryEditor"
+  },
+  "api/ToolkitEngine.Vision.IVisionModeEvents.html": {
+    "href": "api/ToolkitEngine.Vision.IVisionModeEvents.html",
+    "title": "Interface IVisionModeEvents | Vision Toolkit | 1.0.0",
+    "keywords": "Interface IVisionModeEvents Namespace ToolkitEngine.Vision public interface IVisionModeEvents Properties onChanged UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode>"
+  },
+  "api/ToolkitEngine.Vision.VisionCategory.RenderType.html": {
+    "href": "api/ToolkitEngine.Vision.VisionCategory.RenderType.html",
+    "title": "Enum VisionCategory.RenderType | Vision Toolkit | 1.0.0",
+    "keywords": "Enum VisionCategory.RenderType Namespace ToolkitEngine.Vision [Flags] public enum VisionCategory.RenderType Fields Replace = 1 Toggle = 2"
+  },
+  "api/ToolkitEngine.Vision.VisionCategory.VisionModeMap.html": {
+    "href": "api/ToolkitEngine.Vision.VisionCategory.VisionModeMap.html",
+    "title": "Class VisionCategory.VisionModeMap | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionCategory.VisionModeMap Namespace ToolkitEngine.Vision [Serializable] public class VisionCategory.VisionModeMap : SerializableDictionary<VisionMode, Material> Inheritance object VisionCategory.VisionModeMap"
+  },
+  "api/ToolkitEngine.Vision.VisionCategory.html": {
+    "href": "api/ToolkitEngine.Vision.VisionCategory.html",
+    "title": "Class VisionCategory | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionCategory Namespace ToolkitEngine.Vision public class VisionCategory : ScriptableObject Inheritance object VisionCategory Properties renderType public VisionCategory.RenderType renderType { get; } Property Value VisionCategory.RenderType Methods TryGetMaterial(VisionMode, out Material) public bool TryGetMaterial(VisionMode visionMode, out Material material) Parameters visionMode VisionMode material Material Returns bool"
+  },
+  "api/ToolkitEngine.Vision.VisionCategoryControl.html": {
+    "href": "api/ToolkitEngine.Vision.VisionCategoryControl.html",
+    "title": "Class VisionCategoryControl | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionCategoryControl Namespace ToolkitEngine.Vision public class VisionCategoryControl : MonoBehaviour, IVisionModeEvents Inheritance object VisionCategoryControl Implements IVisionModeEvents Properties category public VisionCategory category { get; } Property Value VisionCategory onChanged public UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode>"
+  },
+  "api/ToolkitEngine.Vision.VisionMode.html": {
+    "href": "api/ToolkitEngine.Vision.VisionMode.html",
+    "title": "Class VisionMode | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionMode Namespace ToolkitEngine.Vision public class VisionMode : ScriptableObject Inheritance object VisionMode"
+  },
+  "api/ToolkitEngine.Vision.VisionModeControl.html": {
+    "href": "api/ToolkitEngine.Vision.VisionModeControl.html",
+    "title": "Class VisionModeControl | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionModeControl Namespace ToolkitEngine.Vision public class VisionModeControl : MonoBehaviour Inheritance object VisionModeControl Properties mode public VisionMode mode { get; } Property Value VisionMode Methods ClearMode() public void ClearMode() SetMode() public void SetMode()"
+  },
+  "api/ToolkitEngine.Vision.VisionModeEvents.html": {
+    "href": "api/ToolkitEngine.Vision.VisionModeEvents.html",
+    "title": "Class VisionModeEvents | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionModeEvents Namespace ToolkitEngine.Vision public class VisionModeEvents : MonoBehaviour, IVisionModeEvents Inheritance object VisionModeEvents Implements IVisionModeEvents Properties onChanged public UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode>"
+  },
+  "api/ToolkitEngine.Vision.VisionModeManager.html": {
+    "href": "api/ToolkitEngine.Vision.VisionModeManager.html",
+    "title": "Class VisionModeManager | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionModeManager Namespace ToolkitEngine.Vision public class VisionModeManager : Singleton<VisionModeManager>, IVisionModeEvents Inheritance object VisionModeManager Implements IVisionModeEvents Properties activeMode public VisionMode activeMode { get; set; } Property Value VisionMode config public VisionModeManagerConfig config { get; } Property Value VisionModeManagerConfig onChanged public UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode>"
+  },
+  "api/ToolkitEngine.Vision.VisionModeManagerConfig.html": {
+    "href": "api/ToolkitEngine.Vision.VisionModeManagerConfig.html",
+    "title": "Class VisionModeManagerConfig | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionModeManagerConfig Namespace ToolkitEngine.Vision public class VisionModeManagerConfig : ScriptableObject Inheritance object VisionModeManagerConfig Properties modes public VisionMode[] modes { get; } Property Value VisionMode[]"
+  },
+  "api/ToolkitEngine.Vision.VisualScripting.ClearVisionMode.html": {
+    "href": "api/ToolkitEngine.Vision.VisualScripting.ClearVisionMode.html",
+    "title": "Class ClearVisionMode | Vision Toolkit | 1.0.0",
+    "keywords": "Class ClearVisionMode Namespace ToolkitEngine.Vision.VisualScripting public class ClearVisionMode : Unit Inheritance object ClearVisionMode Fields enter public ControlInput enter Field Value ControlInput exit public ControlOutput exit Field Value ControlOutput Methods Definition() protected override void Definition()"
+  },
+  "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html": {
+    "href": "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html",
+    "title": "Class OnVisionModeChanged | Vision Toolkit | 1.0.0",
+    "keywords": "Class OnVisionModeChanged Namespace ToolkitEngine.Vision.VisualScripting public class OnVisionModeChanged : EventUnit<VisionMode> Inheritance object OnVisionModeChanged Fields filtered public bool filtered Field Value bool mode public ValueInput mode Field Value ValueInput Properties hookName public string hookName { get; } Property Value string register protected override bool register { get; } Property Value bool Methods Definition() protected override void Definition() ShouldTrigger(Flow, VisionMode) protected override bool ShouldTrigger(Flow flow, VisionMode args) Parameters flow Flow args VisionMode Returns bool StartListening(GraphStack) public override void StartListening(GraphStack stack) Parameters stack GraphStack StopListening(GraphStack) public override void StopListening(GraphStack stack) Parameters stack GraphStack"
+  },
+  "api/ToolkitEngine.Vision.VisualScripting.SetVisionMode.html": {
+    "href": "api/ToolkitEngine.Vision.VisualScripting.SetVisionMode.html",
+    "title": "Class SetVisionMode | Vision Toolkit | 1.0.0",
+    "keywords": "Class SetVisionMode Namespace ToolkitEngine.Vision.VisualScripting public class SetVisionMode : Unit Inheritance object SetVisionMode Fields enter public ControlInput enter Field Value ControlInput exit public ControlOutput exit Field Value ControlOutput mode public ValueInput mode Field Value ValueInput Methods Definition() protected override void Definition()"
+  },
+  "api/ToolkitEngine.Vision.VisualScripting.html": {
+    "href": "api/ToolkitEngine.Vision.VisualScripting.html",
+    "title": "Namespace ToolkitEngine.Vision.VisualScripting | Vision Toolkit | 1.0.0",
+    "keywords": "Namespace ToolkitEngine.Vision.VisualScripting Classes ClearVisionMode OnVisionModeChanged SetVisionMode"
+  },
+  "api/ToolkitEngine.Vision.html": {
+    "href": "api/ToolkitEngine.Vision.html",
+    "title": "Namespace ToolkitEngine.Vision | Vision Toolkit | 1.0.0",
+    "keywords": "Namespace ToolkitEngine.Vision Classes VisionCategory VisionCategory.VisionModeMap VisionCategoryControl VisionMode VisionModeControl VisionModeEvents VisionModeManager VisionModeManagerConfig Interfaces IVisionModeEvents Enums VisionCategory.RenderType"
+  },
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "| Vision Toolkit | 1.0.0",
+    "keywords": "This is the documentation for the Scripting APIs of this package."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "| Vision Toolkit | 1.0.0",
+    "keywords": "This page redirects to the manual."
+  },
+  "license/LICENSE.html": {
+    "href": "license/LICENSE.html",
+    "title": "| Vision Toolkit | 1.0.0",
+    "keywords": "MIT License Copyright (c) 2024 nrvllrgrs Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  "manual/index.html": {
+    "href": "manual/index.html",
+    "title": "toolkit.vision | Vision Toolkit | 1.0.0",
+    "keywords": "toolkit.vision"
+  }
+}
