@@ -45,6 +45,12 @@ references:
   commentId: F:ToolkitEditor.Vision.VisionCategoryControlEditor.m_category
   fullName: ToolkitEditor.Vision.VisionCategoryControlEditor.m_category
   nameWithType: VisionCategoryControlEditor.m_category
+- uid: ToolkitEditor.Vision.VisionCategoryControlEditor.m_ignoredMaterials
+  name: m_ignoredMaterials
+  href: api/ToolkitEditor.Vision.VisionCategoryControlEditor.html#ToolkitEditor_Vision_VisionCategoryControlEditor_m_ignoredMaterials
+  commentId: F:ToolkitEditor.Vision.VisionCategoryControlEditor.m_ignoredMaterials
+  fullName: ToolkitEditor.Vision.VisionCategoryControlEditor.m_ignoredMaterials
+  nameWithType: VisionCategoryControlEditor.m_ignoredMaterials
 - uid: ToolkitEditor.Vision.VisionCategoryControlEditor.m_ignoredRenderers
   name: m_ignoredRenderers
   href: api/ToolkitEditor.Vision.VisionCategoryControlEditor.html#ToolkitEditor_Vision_VisionCategoryControlEditor_m_ignoredRenderers
