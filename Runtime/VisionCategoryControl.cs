@@ -15,6 +15,9 @@ namespace ToolkitEngine.Vision
 		[SerializeField]
 		private List<Renderer> m_ignoredRenderers = new();
 
+		[SerializeField]
+		private List<Material> m_ignoredMaterials = new();
+
 		private Dictionary<Renderer, List<Material>> m_defaultMap = new();
 
 		#endregion
@@ -47,13 +50,23 @@ namespace ToolkitEngine.Vision
 					renderer.enabled = false;
 				}
 
-				m_defaultMap.Add(renderer, new List<Material>(renderer.materials));
+				List<Material> materials = new();
+				foreach (var material in renderer.materials)
+				{
+					if (m_ignoredMaterials.Contains(material))
+						continue;
+
+					materials.Add(material);
+				}
+
+				m_defaultMap.Add(renderer, materials);
 			}
 		}
 
 		private void OnEnable()
 		{
 			VisionModeManager.Instance.onChanged.AddListener(Changed);
+			Changed(VisionModeManager.Instance.activeMode);
 		}
 
 		private void OnDisable()
