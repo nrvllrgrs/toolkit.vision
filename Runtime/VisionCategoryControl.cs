@@ -31,7 +31,7 @@ namespace ToolkitEngine.Vision
 		private UnityEvent m_onNormalized;
 
 		[SerializeField]
-		private UnityEvent m_onOverridden;
+		private UnityEvent m_onSpecialized;
 
 		#endregion
 
@@ -40,7 +40,7 @@ namespace ToolkitEngine.Vision
 		public VisionCategory category => m_category;
 		public UnityEvent<VisionMode> onChanged => m_onChanged;
 		public UnityEvent onNormalized => m_onNormalized;
-		public UnityEvent onOverridden => m_onOverridden;
+		public UnityEvent onSpecialized => m_onSpecialized;
 
 		#endregion
 
@@ -105,7 +105,7 @@ namespace ToolkitEngine.Vision
 			m_onChanged?.Invoke(mode);
 			if (overridden)
 			{
-				m_onOverridden?.Invoke();
+				m_onSpecialized?.Invoke();
 			}
 			else
 			{
