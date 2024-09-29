@@ -2,7 +2,7 @@
   "api/ToolkitEditor.Vision.VisionCategoryControlEditor.html": {
     "href": "api/ToolkitEditor.Vision.VisionCategoryControlEditor.html",
     "title": "Class VisionCategoryControlEditor | Vision Toolkit | 1.0.0",
-    "keywords": "Class VisionCategoryControlEditor Namespace ToolkitEditor.Vision public class VisionCategoryControlEditor : BaseToolkitEditor Inheritance object VisionCategoryControlEditor Fields m_category protected SerializedProperty m_category Field Value SerializedProperty m_ignoredMaterials protected SerializedProperty m_ignoredMaterials Field Value SerializedProperty m_ignoredRenderers protected SerializedProperty m_ignoredRenderers Field Value SerializedProperty m_onChanged protected SerializedProperty m_onChanged Field Value SerializedProperty Methods DrawEvents() protected override void DrawEvents() DrawProperties() protected override void DrawProperties()"
+    "keywords": "Class VisionCategoryControlEditor Namespace ToolkitEditor.Vision public class VisionCategoryControlEditor : BaseToolkitEditor Inheritance object VisionCategoryControlEditor Fields m_category protected SerializedProperty m_category Field Value SerializedProperty m_ignoredMaterials protected SerializedProperty m_ignoredMaterials Field Value SerializedProperty m_ignoredRenderers protected SerializedProperty m_ignoredRenderers Field Value SerializedProperty m_onChanged protected SerializedProperty m_onChanged Field Value SerializedProperty m_onNormalized protected SerializedProperty m_onNormalized Field Value SerializedProperty m_onOverridden protected SerializedProperty m_onOverridden Field Value SerializedProperty Methods DrawEvents() protected override void DrawEvents() DrawProperties() protected override void DrawProperties()"
   },
   "api/ToolkitEditor.Vision.VisionCategoryEditor.html": {
     "href": "api/ToolkitEditor.Vision.VisionCategoryEditor.html",
@@ -47,7 +47,7 @@
   "api/ToolkitEngine.Vision.VisionCategoryControl.html": {
     "href": "api/ToolkitEngine.Vision.VisionCategoryControl.html",
     "title": "Class VisionCategoryControl | Vision Toolkit | 1.0.0",
-    "keywords": "Class VisionCategoryControl Namespace ToolkitEngine.Vision public class VisionCategoryControl : MonoBehaviour, IVisionModeEvents Inheritance object VisionCategoryControl Implements IVisionModeEvents Properties category public VisionCategory category { get; } Property Value VisionCategory onChanged public UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode>"
+    "keywords": "Class VisionCategoryControl Namespace ToolkitEngine.Vision public class VisionCategoryControl : MonoBehaviour, IVisionModeEvents Inheritance object VisionCategoryControl Implements IVisionModeEvents Properties category public VisionCategory category { get; } Property Value VisionCategory onChanged public UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode> onNormalized public UnityEvent onNormalized { get; } Property Value UnityEvent onOverridden public UnityEvent onOverridden { get; } Property Value UnityEvent"
   },
   "api/ToolkitEngine.Vision.VisionMode.html": {
     "href": "api/ToolkitEngine.Vision.VisionMode.html",

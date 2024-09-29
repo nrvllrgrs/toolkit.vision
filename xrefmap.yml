@@ -63,6 +63,18 @@ references:
   commentId: F:ToolkitEditor.Vision.VisionCategoryControlEditor.m_onChanged
   fullName: ToolkitEditor.Vision.VisionCategoryControlEditor.m_onChanged
   nameWithType: VisionCategoryControlEditor.m_onChanged
+- uid: ToolkitEditor.Vision.VisionCategoryControlEditor.m_onNormalized
+  name: m_onNormalized
+  href: api/ToolkitEditor.Vision.VisionCategoryControlEditor.html#ToolkitEditor_Vision_VisionCategoryControlEditor_m_onNormalized
+  commentId: F:ToolkitEditor.Vision.VisionCategoryControlEditor.m_onNormalized
+  fullName: ToolkitEditor.Vision.VisionCategoryControlEditor.m_onNormalized
+  nameWithType: VisionCategoryControlEditor.m_onNormalized
+- uid: ToolkitEditor.Vision.VisionCategoryControlEditor.m_onOverridden
+  name: m_onOverridden
+  href: api/ToolkitEditor.Vision.VisionCategoryControlEditor.html#ToolkitEditor_Vision_VisionCategoryControlEditor_m_onOverridden
+  commentId: F:ToolkitEditor.Vision.VisionCategoryControlEditor.m_onOverridden
+  fullName: ToolkitEditor.Vision.VisionCategoryControlEditor.m_onOverridden
+  nameWithType: VisionCategoryControlEditor.m_onOverridden
 - uid: ToolkitEditor.Vision.VisionCategoryEditor
   name: VisionCategoryEditor
   href: api/ToolkitEditor.Vision.VisionCategoryEditor.html
@@ -222,6 +234,32 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.VisionCategoryControl.onChanged
   nameWithType: VisionCategoryControl.onChanged
+- uid: ToolkitEngine.Vision.VisionCategoryControl.onNormalized
+  name: onNormalized
+  href: api/ToolkitEngine.Vision.VisionCategoryControl.html#ToolkitEngine_Vision_VisionCategoryControl_onNormalized
+  commentId: P:ToolkitEngine.Vision.VisionCategoryControl.onNormalized
+  fullName: ToolkitEngine.Vision.VisionCategoryControl.onNormalized
+  nameWithType: VisionCategoryControl.onNormalized
+- uid: ToolkitEngine.Vision.VisionCategoryControl.onNormalized*
+  name: onNormalized
+  href: api/ToolkitEngine.Vision.VisionCategoryControl.html#ToolkitEngine_Vision_VisionCategoryControl_onNormalized_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategoryControl.onNormalized
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisionCategoryControl.onNormalized
+  nameWithType: VisionCategoryControl.onNormalized
+- uid: ToolkitEngine.Vision.VisionCategoryControl.onOverridden
+  name: onOverridden
+  href: api/ToolkitEngine.Vision.VisionCategoryControl.html#ToolkitEngine_Vision_VisionCategoryControl_onOverridden
+  commentId: P:ToolkitEngine.Vision.VisionCategoryControl.onOverridden
+  fullName: ToolkitEngine.Vision.VisionCategoryControl.onOverridden
+  nameWithType: VisionCategoryControl.onOverridden
+- uid: ToolkitEngine.Vision.VisionCategoryControl.onOverridden*
+  name: onOverridden
+  href: api/ToolkitEngine.Vision.VisionCategoryControl.html#ToolkitEngine_Vision_VisionCategoryControl_onOverridden_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategoryControl.onOverridden
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisionCategoryControl.onOverridden
+  nameWithType: VisionCategoryControl.onOverridden
 - uid: ToolkitEngine.Vision.VisionMode
   name: VisionMode
   href: api/ToolkitEngine.Vision.VisionMode.html
