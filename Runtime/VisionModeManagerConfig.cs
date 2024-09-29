@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ToolkitEngine.Vision
 {
-	[CreateAssetMenu(menuName = "Toolkit/Vision/Vision Mode Config")]
+	[CreateAssetMenu(menuName = "Toolkit/Config/VisionModeManager Config")]
 	public class VisionModeManagerConfig : ScriptableObject
 	{
 		#region Fields
