@@ -5,7 +5,9 @@ using UnityEngine.Events;
 
 namespace ToolkitEngine.Vision
 {
+#if UNITY_EDITOR
 	[InitializeOnLoad]
+#endif
 	public class VisionModeManager : Singleton<VisionModeManager>, IVisionModeEvents
 	{
 		#region Fields
