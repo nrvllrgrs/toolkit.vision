@@ -27,12 +27,20 @@ namespace ToolkitEngine.Vision
 		[SerializeField]
 		private UnityEvent<VisionMode> m_onChanged;
 
+		[SerializeField]
+		private UnityEvent m_onNormalized;
+
+		[SerializeField]
+		private UnityEvent m_onOverridden;
+
 		#endregion
 
 		#region Properties
 
 		public VisionCategory category => m_category;
 		public UnityEvent<VisionMode> onChanged => m_onChanged;
+		public UnityEvent onNormalized => m_onNormalized;
+		public UnityEvent onOverridden => m_onOverridden;
 
 		#endregion
 
@@ -82,24 +90,33 @@ namespace ToolkitEngine.Vision
 			if (m_category == null)
 				return;
 
+			bool overridden = false;
 			if (mode != null)
 			{
-				SetMaterial(mode);
-				EnableRenderer(true);
+				overridden |= SetMaterial(mode);
+				overridden |= EnableRenderer(true);
 			}
 			else
 			{
-				EnableRenderer(false);
-				SetMaterial(null);
+				overridden |= EnableRenderer(false);
+				overridden |= SetMaterial(null);
 			}
 
 			m_onChanged?.Invoke(mode);
+			if (overridden)
+			{
+				m_onOverridden?.Invoke();
+			}
+			else
+			{
+				m_onNormalized?.Invoke();
+			}
 		}
 
-		private void SetMaterial(VisionMode mode)
+		private bool SetMaterial(VisionMode mode)
 		{
 			if ((m_category.renderType & VisionCategory.RenderType.Replace) == 0)
-				return;
+				return false;
 
 			if (mode != null && m_category.TryGetMaterial(mode, out Material material) && material != null)
 			{
@@ -107,6 +124,7 @@ namespace ToolkitEngine.Vision
 				{
 					p.Key.SetMaterials(Enumerable.Repeat(material, p.Value.Count).ToList());
 				}
+				return true;
 			}
 			else
 			{
@@ -114,18 +132,20 @@ namespace ToolkitEngine.Vision
 				{
 					p.Key.SetMaterials(p.Value);
 				}
+				return false;
 			}
 		}
 
-		private void EnableRenderer(bool enabled)
+		private bool EnableRenderer(bool enabled)
 		{
 			if ((m_category.renderType & VisionCategory.RenderType.Toggle) == 0)
-				return;
+				return false;
 
 			foreach (var p in m_defaultMap)
 			{
 				p.Key.enabled = enabled;
 			}
+			return enabled;
 		}
 
 		#endregion
