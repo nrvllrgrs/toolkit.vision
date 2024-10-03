@@ -7,7 +7,7 @@
   "api/ToolkitEditor.Vision.VisionCategoryEditor.html": {
     "href": "api/ToolkitEditor.Vision.VisionCategoryEditor.html",
     "title": "Class VisionCategoryEditor | Vision Toolkit | 1.0.0",
-    "keywords": "Class VisionCategoryEditor Namespace ToolkitEditor.Vision public class VisionCategoryEditor : BaseToolkitEditor Inheritance object VisionCategoryEditor Fields m_materials protected SerializedProperty m_materials Field Value SerializedProperty m_renderType protected SerializedProperty m_renderType Field Value SerializedProperty Methods DrawProperties() protected override void DrawProperties()"
+    "keywords": "Class VisionCategoryEditor Namespace ToolkitEditor.Vision public class VisionCategoryEditor : BaseToolkitEditor Inheritance object VisionCategoryEditor Fields m_map protected SerializedProperty m_map Field Value SerializedProperty m_renderType protected SerializedProperty m_renderType Field Value SerializedProperty Methods DrawProperties() protected override void DrawProperties()"
   },
   "api/ToolkitEditor.Vision.VisualScripting.Setup.html": {
     "href": "api/ToolkitEditor.Vision.VisualScripting.Setup.html",
@@ -32,17 +32,22 @@
   "api/ToolkitEngine.Vision.VisionCategory.RenderType.html": {
     "href": "api/ToolkitEngine.Vision.VisionCategory.RenderType.html",
     "title": "Enum VisionCategory.RenderType | Vision Toolkit | 1.0.0",
-    "keywords": "Enum VisionCategory.RenderType Namespace ToolkitEngine.Vision [Flags] public enum VisionCategory.RenderType Fields Replace = 1 Toggle = 2"
+    "keywords": "Enum VisionCategory.RenderType Namespace ToolkitEngine.Vision [Flags] public enum VisionCategory.RenderType Fields Property = 4 Replace = 1 Toggle = 2"
   },
-  "api/ToolkitEngine.Vision.VisionCategory.VisionModeMap.html": {
-    "href": "api/ToolkitEngine.Vision.VisionCategory.VisionModeMap.html",
-    "title": "Class VisionCategory.VisionModeMap | Vision Toolkit | 1.0.0",
-    "keywords": "Class VisionCategory.VisionModeMap Namespace ToolkitEngine.Vision [Serializable] public class VisionCategory.VisionModeMap : SerializableDictionary<VisionMode, Material> Inheritance object VisionCategory.VisionModeMap"
+  "api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html": {
+    "href": "api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html",
+    "title": "Class VisionCategory.VisionModeData | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionCategory.VisionModeData Namespace ToolkitEngine.Vision [Serializable] public class VisionCategory.VisionModeData Inheritance object VisionCategory.VisionModeData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties enabled public bool enabled { get; } Property Value bool material public Material material { get; } Property Value Material propertyName public string propertyName { get; } Property Value string propertyValue public int propertyValue { get; } Property Value int"
+  },
+  "api/ToolkitEngine.Vision.VisionCategory.VisionModeDataMap.html": {
+    "href": "api/ToolkitEngine.Vision.VisionCategory.VisionModeDataMap.html",
+    "title": "Class VisionCategory.VisionModeDataMap | Vision Toolkit | 1.0.0",
+    "keywords": "Class VisionCategory.VisionModeDataMap Namespace ToolkitEngine.Vision [Serializable] public class VisionCategory.VisionModeDataMap : SerializableDictionary<VisionMode, VisionCategory.VisionModeData> Inheritance object VisionCategory.VisionModeDataMap"
   },
   "api/ToolkitEngine.Vision.VisionCategory.html": {
     "href": "api/ToolkitEngine.Vision.VisionCategory.html",
     "title": "Class VisionCategory | Vision Toolkit | 1.0.0",
-    "keywords": "Class VisionCategory Namespace ToolkitEngine.Vision public class VisionCategory : ScriptableObject Inheritance object VisionCategory Properties renderType public VisionCategory.RenderType renderType { get; } Property Value VisionCategory.RenderType Methods TryGetMaterial(VisionMode, out Material) public bool TryGetMaterial(VisionMode visionMode, out Material material) Parameters visionMode VisionMode material Material Returns bool"
+    "keywords": "Class VisionCategory Namespace ToolkitEngine.Vision public class VisionCategory : ScriptableObject Inheritance object VisionCategory Properties renderType public VisionCategory.RenderType renderType { get; } Property Value VisionCategory.RenderType Methods GetEnabled(VisionMode) public bool GetEnabled(VisionMode visionMode) Parameters visionMode VisionMode Returns bool TryGetMaterial(VisionMode, out Material) public bool TryGetMaterial(VisionMode visionMode, out Material material) Parameters visionMode VisionMode material Material Returns bool TryGetPropertyNameAndValue(VisionMode, out string, out int) public bool TryGetPropertyNameAndValue(VisionMode visionMode, out string name, out int value) Parameters visionMode VisionMode name string value int Returns bool"
   },
   "api/ToolkitEngine.Vision.VisionCategoryControl.html": {
     "href": "api/ToolkitEngine.Vision.VisionCategoryControl.html",
@@ -97,7 +102,7 @@
   "api/ToolkitEngine.Vision.html": {
     "href": "api/ToolkitEngine.Vision.html",
     "title": "Namespace ToolkitEngine.Vision | Vision Toolkit | 1.0.0",
-    "keywords": "Namespace ToolkitEngine.Vision Classes VisionCategory VisionCategory.VisionModeMap VisionCategoryControl VisionMode VisionModeControl VisionModeEvents VisionModeManager VisionModeManagerConfig Interfaces IVisionModeEvents Enums VisionCategory.RenderType"
+    "keywords": "Namespace ToolkitEngine.Vision Classes VisionCategory VisionCategory.VisionModeData VisionCategory.VisionModeDataMap VisionCategoryControl VisionMode VisionModeControl VisionModeEvents VisionModeManager VisionModeManagerConfig Interfaces IVisionModeEvents Enums VisionCategory.RenderType"
   },
   "api/index.html": {
     "href": "api/index.html",

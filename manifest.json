@@ -85,10 +85,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ToolkitEngine.Vision.VisionCategory.VisionModeMap.yml",
+      "source_relative_path": "api/ToolkitEngine.Vision.VisionCategory.VisionModeData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ToolkitEngine.Vision.VisionCategory.VisionModeMap.html"
+          "relative_path": "api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ToolkitEngine.Vision.VisionCategory.VisionModeDataMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToolkitEngine.Vision.VisionCategory.VisionModeDataMap.html"
         }
       },
       "version": ""

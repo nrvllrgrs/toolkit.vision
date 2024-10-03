@@ -94,12 +94,12 @@ references:
   isSpec: "True"
   fullName: ToolkitEditor.Vision.VisionCategoryEditor.DrawProperties
   nameWithType: VisionCategoryEditor.DrawProperties
-- uid: ToolkitEditor.Vision.VisionCategoryEditor.m_materials
-  name: m_materials
-  href: api/ToolkitEditor.Vision.VisionCategoryEditor.html#ToolkitEditor_Vision_VisionCategoryEditor_m_materials
-  commentId: F:ToolkitEditor.Vision.VisionCategoryEditor.m_materials
-  fullName: ToolkitEditor.Vision.VisionCategoryEditor.m_materials
-  nameWithType: VisionCategoryEditor.m_materials
+- uid: ToolkitEditor.Vision.VisionCategoryEditor.m_map
+  name: m_map
+  href: api/ToolkitEditor.Vision.VisionCategoryEditor.html#ToolkitEditor_Vision_VisionCategoryEditor_m_map
+  commentId: F:ToolkitEditor.Vision.VisionCategoryEditor.m_map
+  fullName: ToolkitEditor.Vision.VisionCategoryEditor.m_map
+  nameWithType: VisionCategoryEditor.m_map
 - uid: ToolkitEditor.Vision.VisionCategoryEditor.m_renderType
   name: m_renderType
   href: api/ToolkitEditor.Vision.VisionCategoryEditor.html#ToolkitEditor_Vision_VisionCategoryEditor_m_renderType
@@ -149,12 +149,31 @@ references:
   commentId: T:ToolkitEngine.Vision.VisionCategory
   fullName: ToolkitEngine.Vision.VisionCategory
   nameWithType: VisionCategory
+- uid: ToolkitEngine.Vision.VisionCategory.GetEnabled(ToolkitEngine.Vision.VisionMode)
+  name: GetEnabled(VisionMode)
+  href: api/ToolkitEngine.Vision.VisionCategory.html#ToolkitEngine_Vision_VisionCategory_GetEnabled_ToolkitEngine_Vision_VisionMode_
+  commentId: M:ToolkitEngine.Vision.VisionCategory.GetEnabled(ToolkitEngine.Vision.VisionMode)
+  fullName: ToolkitEngine.Vision.VisionCategory.GetEnabled(ToolkitEngine.Vision.VisionMode)
+  nameWithType: VisionCategory.GetEnabled(VisionMode)
+- uid: ToolkitEngine.Vision.VisionCategory.GetEnabled*
+  name: GetEnabled
+  href: api/ToolkitEngine.Vision.VisionCategory.html#ToolkitEngine_Vision_VisionCategory_GetEnabled_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategory.GetEnabled
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisionCategory.GetEnabled
+  nameWithType: VisionCategory.GetEnabled
 - uid: ToolkitEngine.Vision.VisionCategory.RenderType
   name: VisionCategory.RenderType
   href: api/ToolkitEngine.Vision.VisionCategory.RenderType.html
   commentId: T:ToolkitEngine.Vision.VisionCategory.RenderType
   fullName: ToolkitEngine.Vision.VisionCategory.RenderType
   nameWithType: VisionCategory.RenderType
+- uid: ToolkitEngine.Vision.VisionCategory.RenderType.Property
+  name: Property
+  href: api/ToolkitEngine.Vision.VisionCategory.RenderType.html#ToolkitEngine_Vision_VisionCategory_RenderType_Property
+  commentId: F:ToolkitEngine.Vision.VisionCategory.RenderType.Property
+  fullName: ToolkitEngine.Vision.VisionCategory.RenderType.Property
+  nameWithType: VisionCategory.RenderType.Property
 - uid: ToolkitEngine.Vision.VisionCategory.RenderType.Replace
   name: Replace
   href: api/ToolkitEngine.Vision.VisionCategory.RenderType.html#ToolkitEngine_Vision_VisionCategory_RenderType_Replace
@@ -183,12 +202,86 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.VisionCategory.TryGetMaterial
   nameWithType: VisionCategory.TryGetMaterial
-- uid: ToolkitEngine.Vision.VisionCategory.VisionModeMap
-  name: VisionCategory.VisionModeMap
-  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeMap.html
-  commentId: T:ToolkitEngine.Vision.VisionCategory.VisionModeMap
-  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeMap
-  nameWithType: VisionCategory.VisionModeMap
+- uid: ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue(ToolkitEngine.Vision.VisionMode,System.String@,System.Int32@)
+  name: TryGetPropertyNameAndValue(VisionMode, out string, out int)
+  href: api/ToolkitEngine.Vision.VisionCategory.html#ToolkitEngine_Vision_VisionCategory_TryGetPropertyNameAndValue_ToolkitEngine_Vision_VisionMode_System_String__System_Int32__
+  commentId: M:ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue(ToolkitEngine.Vision.VisionMode,System.String@,System.Int32@)
+  name.vb: TryGetPropertyNameAndValue(VisionMode, String, Integer)
+  fullName: ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue(ToolkitEngine.Vision.VisionMode, out string, out int)
+  fullName.vb: ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue(ToolkitEngine.Vision.VisionMode, String, Integer)
+  nameWithType: VisionCategory.TryGetPropertyNameAndValue(VisionMode, out string, out int)
+  nameWithType.vb: VisionCategory.TryGetPropertyNameAndValue(VisionMode, String, Integer)
+- uid: ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue*
+  name: TryGetPropertyNameAndValue
+  href: api/ToolkitEngine.Vision.VisionCategory.html#ToolkitEngine_Vision_VisionCategory_TryGetPropertyNameAndValue_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue
+  nameWithType: VisionCategory.TryGetPropertyNameAndValue
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData
+  name: VisionCategory.VisionModeData
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html
+  commentId: T:ToolkitEngine.Vision.VisionCategory.VisionModeData
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData
+  nameWithType: VisionCategory.VisionModeData
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.enabled
+  name: enabled
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_enabled
+  commentId: P:ToolkitEngine.Vision.VisionCategory.VisionModeData.enabled
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.enabled
+  nameWithType: VisionCategory.VisionModeData.enabled
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.enabled*
+  name: enabled
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_enabled_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategory.VisionModeData.enabled
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.enabled
+  nameWithType: VisionCategory.VisionModeData.enabled
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.material
+  name: material
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_material
+  commentId: P:ToolkitEngine.Vision.VisionCategory.VisionModeData.material
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.material
+  nameWithType: VisionCategory.VisionModeData.material
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.material*
+  name: material
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_material_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategory.VisionModeData.material
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.material
+  nameWithType: VisionCategory.VisionModeData.material
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName
+  name: propertyName
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_propertyName
+  commentId: P:ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName
+  nameWithType: VisionCategory.VisionModeData.propertyName
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName*
+  name: propertyName
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_propertyName_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName
+  nameWithType: VisionCategory.VisionModeData.propertyName
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue
+  name: propertyValue
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_propertyValue
+  commentId: P:ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue
+  nameWithType: VisionCategory.VisionModeData.propertyValue
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue*
+  name: propertyValue
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_propertyValue_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue
+  nameWithType: VisionCategory.VisionModeData.propertyValue
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeDataMap
+  name: VisionCategory.VisionModeDataMap
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeDataMap.html
+  commentId: T:ToolkitEngine.Vision.VisionCategory.VisionModeDataMap
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeDataMap
+  nameWithType: VisionCategory.VisionModeDataMap
 - uid: ToolkitEngine.Vision.VisionCategory.renderType
   name: renderType
   href: api/ToolkitEngine.Vision.VisionCategory.html#ToolkitEngine_Vision_VisionCategory_renderType
