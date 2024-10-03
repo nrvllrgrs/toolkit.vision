@@ -19,6 +19,7 @@ namespace ToolkitEngine.Vision
 		private List<Material> m_ignoredMaterials = new();
 
 		private Dictionary<Renderer, List<Material>> m_defaultMap = new();
+		private string m_modifiedPropertyName = null;
 
 		#endregion
 
@@ -48,7 +49,7 @@ namespace ToolkitEngine.Vision
 
 		private void Awake()
 		{
-			foreach (var renderer in GetComponentsInChildren<Renderer>())
+			foreach (var renderer in GetComponentsInChildren<Renderer>(true))
 			{
 				if (m_ignoredRenderers.Contains(renderer))
 					continue;
@@ -94,11 +95,13 @@ namespace ToolkitEngine.Vision
 			if (mode != null)
 			{
 				overridden |= SetMaterial(mode);
-				overridden |= EnableRenderer(true);
+				overridden |= SetMaterialProperty(mode);
+				overridden |= EnableRenderer(mode, true);
 			}
 			else
 			{
-				overridden |= EnableRenderer(false);
+				overridden |= EnableRenderer(null, false);
+				overridden |= SetMaterialProperty(null);
 				overridden |= SetMaterial(null);
 			}
 
@@ -136,11 +139,44 @@ namespace ToolkitEngine.Vision
 			}
 		}
 
-		private bool EnableRenderer(bool enabled)
+		private bool SetMaterialProperty(VisionMode mode)
+		{
+			if ((m_category.renderType & VisionCategory.RenderType.Property) == 0)
+				return false;
+
+			if (mode != null && m_category.TryGetPropertyNameAndValue(mode, out string name, out int value) && !string.IsNullOrWhiteSpace(name))
+			{
+				foreach (var materials in m_defaultMap.Values)
+				{
+					foreach (var material in materials)
+					{
+						material.SetInt(name, value);
+					}
+				}
+				m_modifiedPropertyName = name;
+				return true;
+			}
+			else if (!string.IsNullOrEmpty(m_modifiedPropertyName))
+			{
+				foreach (var materials in m_defaultMap.Values)
+				{
+					foreach (var material in materials)
+					{
+						material.SetInt(m_modifiedPropertyName, 0);
+					}
+				}
+				m_modifiedPropertyName = null;
+			}
+
+			return false;
+		}
+
+		private bool EnableRenderer(VisionMode mode, bool enabled)
 		{
 			if ((m_category.renderType & VisionCategory.RenderType.Toggle) == 0)
 				return false;
 
+			enabled |= m_category.GetEnabled(mode);
 			foreach (var p in m_defaultMap)
 			{
 				p.Key.enabled = enabled;
