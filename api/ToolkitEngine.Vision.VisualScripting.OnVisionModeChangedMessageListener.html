@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class VisionModeManager | Vision Toolkit | 1.0.0 </title>
+      <title>Class OnVisionModeChangedMessageListener | Vision Toolkit | 1.0.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class VisionModeManager | Vision Toolkit | 1.0.0 ">
+      <meta name="title" content="Class OnVisionModeChangedMessageListener | Vision Toolkit | 1.0.0 ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       <meta name="docfx:disablenewtab" content="true">
       
-      <meta name="docfx:docurl" content="https://github.com/nrvllrgrs/toolkit.vision/new/master/apiSpec/new?filename=ToolkitEngine_Vision_VisionModeManager.md&amp;value=---%0Auid%3A%20ToolkitEngine.Vision.VisionModeManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/nrvllrgrs/toolkit.vision/new/master/apiSpec/new?filename=ToolkitEngine_Vision_VisualScripting_OnVisionModeChangedMessageListener.md&amp;value=---%0Auid%3A%20ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ToolkitEngine.Vision.VisionModeManager">
+        <article data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener">
 
 
 
-  <h1 id="ToolkitEngine_Vision_VisionModeManager" data-uid="ToolkitEngine.Vision.VisionModeManager" class="text-break">
-Class VisionModeManager  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Runtime/VisionModeManager.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChangedMessageListener" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener" class="text-break">
+Class OnVisionModeChangedMessageListener  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/MessageListeners/OnVisionModeChangeMessageListener.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ToolkitEngine.html">ToolkitEngine</a>.<a class="xref" href="ToolkitEngine.Vision.html">Vision</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ToolkitEngine.html">ToolkitEngine</a>.<a class="xref" href="ToolkitEngine.Vision.html">Vision</a>.<a class="xref" href="ToolkitEngine.Vision.VisualScripting.html">VisualScripting</a></dd></dl>
   
   </div>
 
@@ -101,7 +101,7 @@ Class VisionModeManager  <a class="header-action link-secondary" title="View sou
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class VisionModeManager : ConfigurableSubsystem&lt;VisionModeManager, VisionModeManagerConfig&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class OnVisionModeChangedMessageListener : MessageListener</code></pre>
   </div>
 
 
@@ -111,80 +111,11 @@ Class VisionModeManager  <a class="header-action link-secondary" title="View sou
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">VisionModeManager</span></div>
+      <div><span class="xref">OnVisionModeChangedMessageListener</span></div>
     </dd>
   </dl>
 
 
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="ToolkitEngine_Vision_VisionModeManager_activeMode_" data-uid="ToolkitEngine.Vision.VisionModeManager.activeMode*"></a>
-
-  <h3 id="ToolkitEngine_Vision_VisionModeManager_activeMode" data-uid="ToolkitEngine.Vision.VisionModeManager.activeMode">
-  activeMode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Runtime/VisionModeManager.cs/#L24"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VisionMode activeMode { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ToolkitEngine.Vision.VisionMode.html">VisionMode</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="events">Events
-</h2>
-
-
-
-  <h3 id="ToolkitEngine_Vision_VisionModeManager_Changed" data-uid="ToolkitEngine.Vision.VisionModeManager.Changed">
-  Changed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Runtime/VisionModeManager.cs/#L18"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;VisionMode&gt; Changed</code></pre>
-  </div>
-
-
-
-
-
-
-  <h4 class="section">Event Type</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="ToolkitEngine.Vision.VisionMode.html">VisionMode</a>&gt;</dt>
-    <dd></dd>
-  </dl>
 
 
 

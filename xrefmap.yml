@@ -429,6 +429,12 @@ references:
   commentId: T:ToolkitEngine.Vision.VisionModeManager
   fullName: ToolkitEngine.Vision.VisionModeManager
   nameWithType: VisionModeManager
+- uid: ToolkitEngine.Vision.VisionModeManager.Changed
+  name: Changed
+  href: api/ToolkitEngine.Vision.VisionModeManager.html#ToolkitEngine_Vision_VisionModeManager_Changed
+  commentId: E:ToolkitEngine.Vision.VisionModeManager.Changed
+  fullName: ToolkitEngine.Vision.VisionModeManager.Changed
+  nameWithType: VisionModeManager.Changed
 - uid: ToolkitEngine.Vision.VisionModeManager.activeMode
   name: activeMode
   href: api/ToolkitEngine.Vision.VisionModeManager.html#ToolkitEngine_Vision_VisionModeManager_activeMode
@@ -442,19 +448,6 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.VisionModeManager.activeMode
   nameWithType: VisionModeManager.activeMode
-- uid: ToolkitEngine.Vision.VisionModeManager.onChanged
-  name: onChanged
-  href: api/ToolkitEngine.Vision.VisionModeManager.html#ToolkitEngine_Vision_VisionModeManager_onChanged
-  commentId: P:ToolkitEngine.Vision.VisionModeManager.onChanged
-  fullName: ToolkitEngine.Vision.VisionModeManager.onChanged
-  nameWithType: VisionModeManager.onChanged
-- uid: ToolkitEngine.Vision.VisionModeManager.onChanged*
-  name: onChanged
-  href: api/ToolkitEngine.Vision.VisionModeManager.html#ToolkitEngine_Vision_VisionModeManager_onChanged_
-  commentId: Overload:ToolkitEngine.Vision.VisionModeManager.onChanged
-  isSpec: "True"
-  fullName: ToolkitEngine.Vision.VisionModeManager.onChanged
-  nameWithType: VisionModeManager.onChanged
 - uid: ToolkitEngine.Vision.VisionModeManagerConfig
   name: VisionModeManagerConfig
   href: api/ToolkitEngine.Vision.VisionModeManagerConfig.html
@@ -530,6 +523,19 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.Definition
   nameWithType: OnVisionModeChanged.Definition
+- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.MessageListenerType
+  name: MessageListenerType
+  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_MessageListenerType
+  commentId: P:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.MessageListenerType
+  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.MessageListenerType
+  nameWithType: OnVisionModeChanged.MessageListenerType
+- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.MessageListenerType*
+  name: MessageListenerType
+  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_MessageListenerType_
+  commentId: Overload:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.MessageListenerType
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.MessageListenerType
+  nameWithType: OnVisionModeChanged.MessageListenerType
 - uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.ShouldTrigger(Flow,ToolkitEngine.Vision.VisionMode)
   name: ShouldTrigger(Flow, VisionMode)
   href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_ShouldTrigger_Flow_ToolkitEngine_Vision_VisionMode_
@@ -543,70 +549,50 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.ShouldTrigger
   nameWithType: OnVisionModeChanged.ShouldTrigger
-- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListening(GraphStack)
-  name: StartListening(GraphStack)
-  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_StartListening_GraphStack_
-  commentId: M:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListening(GraphStack)
-  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListening(GraphStack)
-  nameWithType: OnVisionModeChanged.StartListening(GraphStack)
-- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListening*
-  name: StartListening
-  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_StartListening_
-  commentId: Overload:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListening
+- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListeningToManager
+  name: StartListeningToManager()
+  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_StartListeningToManager
+  commentId: M:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListeningToManager
+  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListeningToManager()
+  nameWithType: OnVisionModeChanged.StartListeningToManager()
+- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListeningToManager*
+  name: StartListeningToManager
+  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_StartListeningToManager_
+  commentId: Overload:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListeningToManager
   isSpec: "True"
-  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListening
-  nameWithType: OnVisionModeChanged.StartListening
-- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListening(GraphStack)
-  name: StopListening(GraphStack)
-  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_StopListening_GraphStack_
-  commentId: M:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListening(GraphStack)
-  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListening(GraphStack)
-  nameWithType: OnVisionModeChanged.StopListening(GraphStack)
-- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListening*
-  name: StopListening
-  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_StopListening_
-  commentId: Overload:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListening
+  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListeningToManager
+  nameWithType: OnVisionModeChanged.StartListeningToManager
+- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListeningToManager
+  name: StopListeningToManager()
+  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_StopListeningToManager
+  commentId: M:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListeningToManager
+  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListeningToManager()
+  nameWithType: OnVisionModeChanged.StopListeningToManager()
+- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListeningToManager*
+  name: StopListeningToManager
+  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_StopListeningToManager_
+  commentId: Overload:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListeningToManager
   isSpec: "True"
-  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListening
-  nameWithType: OnVisionModeChanged.StopListening
+  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListeningToManager
+  nameWithType: OnVisionModeChanged.StopListeningToManager
 - uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.filtered
   name: filtered
   href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_filtered
   commentId: F:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.filtered
   fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.filtered
   nameWithType: OnVisionModeChanged.filtered
-- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.hookName
-  name: hookName
-  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_hookName
-  commentId: P:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.hookName
-  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.hookName
-  nameWithType: OnVisionModeChanged.hookName
-- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.hookName*
-  name: hookName
-  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_hookName_
-  commentId: Overload:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.hookName
-  isSpec: "True"
-  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.hookName
-  nameWithType: OnVisionModeChanged.hookName
 - uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.mode
   name: mode
   href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_mode
   commentId: F:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.mode
   fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.mode
   nameWithType: OnVisionModeChanged.mode
-- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.register
-  name: register
-  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_register
-  commentId: P:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.register
-  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.register
-  nameWithType: OnVisionModeChanged.register
-- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.register*
-  name: register
-  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html#ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_register_
-  commentId: Overload:ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.register
-  isSpec: "True"
-  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.register
-  nameWithType: OnVisionModeChanged.register
+- uid: ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener
+  name: OnVisionModeChangedMessageListener
+  href: api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener.html
+  commentId: T:ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener
+  fullName: ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener
+  nameWithType: OnVisionModeChangedMessageListener
 - uid: ToolkitEngine.Vision.VisualScripting.SetVisionMode
   name: SetVisionMode
   href: api/ToolkitEngine.Vision.VisualScripting.SetVisionMode.html

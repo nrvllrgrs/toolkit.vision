@@ -72,7 +72,7 @@
   "api/ToolkitEngine.Vision.VisionModeManager.html": {
     "href": "api/ToolkitEngine.Vision.VisionModeManager.html",
     "title": "Class VisionModeManager | Vision Toolkit | 1.0.0",
-    "keywords": "Class VisionModeManager Namespace ToolkitEngine.Vision public class VisionModeManager : ConfigurableSubsystem<VisionModeManager, VisionModeManagerConfig>, IVisionModeEvents Inheritance object VisionModeManager Implements IVisionModeEvents Properties activeMode public VisionMode activeMode { get; set; } Property Value VisionMode onChanged public UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode>"
+    "keywords": "Class VisionModeManager Namespace ToolkitEngine.Vision public class VisionModeManager : ConfigurableSubsystem<VisionModeManager, VisionModeManagerConfig> Inheritance object VisionModeManager Properties activeMode public VisionMode activeMode { get; set; } Property Value VisionMode Events Changed public event EventHandler<VisionMode> Changed Event Type EventHandler<VisionMode>"
   },
   "api/ToolkitEngine.Vision.VisionModeManagerConfig.html": {
     "href": "api/ToolkitEngine.Vision.VisionModeManagerConfig.html",
@@ -87,7 +87,12 @@
   "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html": {
     "href": "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html",
     "title": "Class OnVisionModeChanged | Vision Toolkit | 1.0.0",
-    "keywords": "Class OnVisionModeChanged Namespace ToolkitEngine.Vision.VisualScripting public class OnVisionModeChanged : EventUnit<VisionMode> Inheritance object OnVisionModeChanged Fields filtered public bool filtered Field Value bool mode public ValueInput mode Field Value ValueInput Properties hookName public string hookName { get; } Property Value string register protected override bool register { get; } Property Value bool Methods Definition() protected override void Definition() ShouldTrigger(Flow, VisionMode) protected override bool ShouldTrigger(Flow flow, VisionMode args) Parameters flow Flow args VisionMode Returns bool StartListening(GraphStack) public override void StartListening(GraphStack stack) Parameters stack GraphStack StopListening(GraphStack) public override void StopListening(GraphStack stack) Parameters stack GraphStack"
+    "keywords": "Class OnVisionModeChanged Namespace ToolkitEngine.Vision.VisualScripting public class OnVisionModeChanged : TargetEventUnit<VisionMode> Inheritance object OnVisionModeChanged Fields filtered public bool filtered Field Value bool mode public ValueInput mode Field Value ValueInput Properties MessageListenerType public override Type MessageListenerType { get; } Property Value Type Methods Definition() protected override void Definition() ShouldTrigger(Flow, VisionMode) protected override bool ShouldTrigger(Flow flow, VisionMode args) Parameters flow Flow args VisionMode Returns bool StartListeningToManager() protected override void StartListeningToManager() StopListeningToManager() protected override void StopListeningToManager()"
+  },
+  "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener.html": {
+    "href": "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener.html",
+    "title": "Class OnVisionModeChangedMessageListener | Vision Toolkit | 1.0.0",
+    "keywords": "Class OnVisionModeChangedMessageListener Namespace ToolkitEngine.Vision.VisualScripting public class OnVisionModeChangedMessageListener : MessageListener Inheritance object OnVisionModeChangedMessageListener"
   },
   "api/ToolkitEngine.Vision.VisualScripting.SetVisionMode.html": {
     "href": "api/ToolkitEngine.Vision.VisualScripting.SetVisionMode.html",
@@ -97,7 +102,7 @@
   "api/ToolkitEngine.Vision.VisualScripting.html": {
     "href": "api/ToolkitEngine.Vision.VisualScripting.html",
     "title": "Namespace ToolkitEngine.Vision.VisualScripting | Vision Toolkit | 1.0.0",
-    "keywords": "Namespace ToolkitEngine.Vision.VisualScripting Classes ClearVisionMode OnVisionModeChanged SetVisionMode"
+    "keywords": "Namespace ToolkitEngine.Vision.VisualScripting Classes ClearVisionMode OnVisionModeChanged OnVisionModeChangedMessageListener SetVisionMode"
   },
   "api/ToolkitEngine.Vision.html": {
     "href": "api/ToolkitEngine.Vision.html",
