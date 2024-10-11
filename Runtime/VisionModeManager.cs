@@ -1,11 +1,10 @@
+using System;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace ToolkitEngine.Vision
 {
-	public class VisionModeManager : ConfigurableSubsystem<VisionModeManager, VisionModeManagerConfig>, IVisionModeEvents
+	public class VisionModeManager : ConfigurableSubsystem<VisionModeManager, VisionModeManagerConfig>
 	{
 		#region Fields
 
@@ -16,7 +15,7 @@ namespace ToolkitEngine.Vision
 		#region Events
 
 		[SerializeField]
-		private UnityEvent<VisionMode> m_onChanged;
+		public event EventHandler<VisionMode> Changed;
 
 		#endregion
 
@@ -36,11 +35,9 @@ namespace ToolkitEngine.Vision
 					return;
 
 				m_activeMode = value;
-				m_onChanged?.Invoke(value);
+				Changed?.Invoke(this, value);
 			}
 		}
-
-		public UnityEvent<VisionMode> onChanged => m_onChanged;
 
 		#endregion
 	}
