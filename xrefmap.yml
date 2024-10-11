@@ -442,19 +442,6 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.VisionModeManager.activeMode
   nameWithType: VisionModeManager.activeMode
-- uid: ToolkitEngine.Vision.VisionModeManager.config
-  name: config
-  href: api/ToolkitEngine.Vision.VisionModeManager.html#ToolkitEngine_Vision_VisionModeManager_config
-  commentId: P:ToolkitEngine.Vision.VisionModeManager.config
-  fullName: ToolkitEngine.Vision.VisionModeManager.config
-  nameWithType: VisionModeManager.config
-- uid: ToolkitEngine.Vision.VisionModeManager.config*
-  name: config
-  href: api/ToolkitEngine.Vision.VisionModeManager.html#ToolkitEngine_Vision_VisionModeManager_config_
-  commentId: Overload:ToolkitEngine.Vision.VisionModeManager.config
-  isSpec: "True"
-  fullName: ToolkitEngine.Vision.VisionModeManager.config
-  nameWithType: VisionModeManager.config
 - uid: ToolkitEngine.Vision.VisionModeManager.onChanged
   name: onChanged
   href: api/ToolkitEngine.Vision.VisionModeManager.html#ToolkitEngine_Vision_VisionModeManager_onChanged

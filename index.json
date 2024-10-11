@@ -72,7 +72,7 @@
   "api/ToolkitEngine.Vision.VisionModeManager.html": {
     "href": "api/ToolkitEngine.Vision.VisionModeManager.html",
     "title": "Class VisionModeManager | Vision Toolkit | 1.0.0",
-    "keywords": "Class VisionModeManager Namespace ToolkitEngine.Vision public class VisionModeManager : Singleton<VisionModeManager>, IVisionModeEvents Inheritance object VisionModeManager Implements IVisionModeEvents Properties activeMode public VisionMode activeMode { get; set; } Property Value VisionMode config public VisionModeManagerConfig config { get; } Property Value VisionModeManagerConfig onChanged public UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode>"
+    "keywords": "Class VisionModeManager Namespace ToolkitEngine.Vision public class VisionModeManager : ConfigurableSubsystem<VisionModeManager, VisionModeManagerConfig>, IVisionModeEvents Inheritance object VisionModeManager Implements IVisionModeEvents Properties activeMode public VisionMode activeMode { get; set; } Property Value VisionMode onChanged public UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode>"
   },
   "api/ToolkitEngine.Vision.VisionModeManagerConfig.html": {
     "href": "api/ToolkitEngine.Vision.VisionModeManagerConfig.html",
