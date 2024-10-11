@@ -33,7 +33,7 @@ namespace ToolkitEditor.Vision
 			var valuesProp = m_map.FindPropertyRelative("values");
 
 			// Get list of vision modes
-			var modes = VisionModeManager.Instance?.config.modes;
+			var modes = VisionModeManager.CastInstance.Config.modes;
 
 			List<VisionMode> keys = new();
 

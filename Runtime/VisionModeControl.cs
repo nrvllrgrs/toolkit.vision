@@ -22,13 +22,13 @@ namespace ToolkitEngine.Vision
 		[ContextMenu("Set Mode")]
 		public void SetMode()
 		{
-			VisionModeManager.Instance.activeMode = mode;
+			VisionModeManager.CastInstance.activeMode = mode;
 		}
 
 		[ContextMenu("Clear Mode")]
 		public void ClearMode()
 		{
-			VisionModeManager.Instance.activeMode = null;
+			VisionModeManager.CastInstance.activeMode = null;
 		}
 
 		#endregion

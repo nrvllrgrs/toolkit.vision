@@ -74,16 +74,13 @@ namespace ToolkitEngine.Vision
 
 		private void OnEnable()
 		{
-			VisionModeManager.Instance.onChanged.AddListener(Changed);
-			Changed(VisionModeManager.Instance.activeMode);
+			VisionModeManager.CastInstance.onChanged.AddListener(Changed);
+			Changed(VisionModeManager.CastInstance.activeMode);
 		}
 
 		private void OnDisable()
 		{
-			if (VisionModeManager.Exists)
-			{
-				VisionModeManager.Instance.onChanged.RemoveListener(Changed);
-			}
+			VisionModeManager.CastInstance.onChanged.RemoveListener(Changed);
 		}
 
 		private void Changed(VisionMode mode)

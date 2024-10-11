@@ -45,7 +45,7 @@ namespace ToolkitEngine.Vision.VisualScripting
 			if (register && m_graph == null)
 			{
 				m_graph = stack.AsReference();
-				VisionModeManager.Instance.onChanged.AddListener(Changed);
+				VisionModeManager.CastInstance.onChanged.AddListener(Changed);
 			}
 		}
 
@@ -55,7 +55,7 @@ namespace ToolkitEngine.Vision.VisualScripting
 
 			if (register && m_graph != null)
 			{
-				VisionModeManager.Instance.onChanged.RemoveListener(Changed);
+				VisionModeManager.CastInstance.onChanged.RemoveListener(Changed);
 				m_graph = null;
 			}
 		}

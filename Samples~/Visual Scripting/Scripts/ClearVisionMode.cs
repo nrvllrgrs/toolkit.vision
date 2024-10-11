@@ -27,7 +27,7 @@ namespace ToolkitEngine.Vision.VisualScripting
 
 		private ControlOutput Enter(Flow flow)
 		{
-			VisionModeManager.Instance.activeMode = null;
+			VisionModeManager.CastInstance.activeMode = null;
 			return exit;
 		}
 

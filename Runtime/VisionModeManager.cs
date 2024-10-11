@@ -5,15 +5,9 @@ using UnityEngine.Events;
 
 namespace ToolkitEngine.Vision
 {
-#if UNITY_EDITOR
-	[InitializeOnLoad]
-#endif
-	public class VisionModeManager : Singleton<VisionModeManager>, IVisionModeEvents
+	public class VisionModeManager : ConfigurableSubsystem<VisionModeManager, VisionModeManagerConfig>, IVisionModeEvents
 	{
 		#region Fields
-
-		[SerializeField]
-		private VisionModeManagerConfig m_config;
 
 		private VisionMode m_activeMode;
 
@@ -28,8 +22,6 @@ namespace ToolkitEngine.Vision
 
 		#region Properties
 
-		public VisionModeManagerConfig config => m_config;
-
 		public VisionMode activeMode
 		{
 			get => m_activeMode;
@@ -40,7 +32,7 @@ namespace ToolkitEngine.Vision
 					return;
 
 				// Non-null value does not exist in config, skip
-				if (value != null && !m_config.modes.Contains(value))
+				if (value != null && !Config.modes.Contains(value))
 					return;
 
 				m_activeMode = value;

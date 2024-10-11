@@ -32,7 +32,7 @@ namespace ToolkitEngine.Vision.VisualScripting
 
 		private ControlOutput Enter(Flow flow)
 		{
-			VisionModeManager.Instance.activeMode = flow.GetValue<VisionMode>(mode);
+			VisionModeManager.CastInstance.activeMode = flow.GetValue<VisionMode>(mode);
 			return exit;
 		}
 
