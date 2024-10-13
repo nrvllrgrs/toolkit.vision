@@ -81,6 +81,7 @@ namespace ToolkitEngine.Vision
 		private void OnDisable()
 		{
 			VisionModeManager.CastInstance.Changed -= Changed;
+			Changed(null, null);
 		}
 
 		private void Changed(object sender, VisionMode mode)
