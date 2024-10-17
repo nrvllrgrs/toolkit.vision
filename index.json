@@ -87,7 +87,7 @@
   "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html": {
     "href": "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.html",
     "title": "Class OnVisionModeChanged | Vision Toolkit | 1.0.0",
-    "keywords": "Class OnVisionModeChanged Namespace ToolkitEngine.Vision.VisualScripting public class OnVisionModeChanged : TargetEventUnit<VisionMode> Inheritance object OnVisionModeChanged Fields filtered public bool filtered Field Value bool mode public ValueInput mode Field Value ValueInput Properties MessageListenerType public override Type MessageListenerType { get; } Property Value Type Methods Definition() protected override void Definition() ShouldTrigger(Flow, VisionMode) protected override bool ShouldTrigger(Flow flow, VisionMode args) Parameters flow Flow args VisionMode Returns bool StartListeningToManager() protected override void StartListeningToManager() StopListeningToManager() protected override void StopListeningToManager()"
+    "keywords": "Class OnVisionModeChanged Namespace ToolkitEngine.Vision.VisualScripting public class OnVisionModeChanged : FilteredTargetEventUnit<VisionMode, VisionMode> Inheritance object OnVisionModeChanged Properties MessageListenerType public override Type MessageListenerType { get; } Property Value Type Methods GetFilterValue(VisionMode) protected override VisionMode GetFilterValue(VisionMode args) Parameters args VisionMode Returns VisionMode StartListeningToManager() protected override void StartListeningToManager() StopListeningToManager() protected override void StopListeningToManager()"
   },
   "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener.html": {
     "href": "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChangedMessageListener.html",

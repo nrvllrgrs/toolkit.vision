@@ -101,7 +101,7 @@ Class OnVisionModeChanged  <a class="header-action link-secondary" title="View s
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OnVisionModeChanged : TargetEventUnit&lt;VisionMode&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class OnVisionModeChanged : FilteredTargetEventUnit&lt;VisionMode, VisionMode&gt;</code></pre>
   </div>
 
 
@@ -123,70 +123,6 @@ Class OnVisionModeChanged  <a class="header-action link-secondary" title="View s
 
 
 
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_filtered" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.filtered">
-  filtered
-  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/OnVisionModeChanged.cs/#L14"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool filtered</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_mode" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.mode">
-  mode
-  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/OnVisionModeChanged.cs/#L17"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ValueInput mode</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">ValueInput</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -195,7 +131,7 @@ Class OnVisionModeChanged  <a class="header-action link-secondary" title="View s
 
   <h3 id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_MessageListenerType" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.MessageListenerType">
   MessageListenerType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/OnVisionModeChanged.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/OnVisionModeChanged.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -226,10 +162,10 @@ Class OnVisionModeChanged  <a class="header-action link-secondary" title="View s
 </h2>
 
 
-  <a id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_Definition_" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.Definition*"></a>
+  <a id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_GetFilterValue_" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.GetFilterValue*"></a>
 
-  <h3 id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_Definition" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.Definition">
-  Definition()
+  <h3 id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_GetFilterValue_ToolkitEngine_Vision_VisionMode_" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.GetFilterValue(ToolkitEngine.Vision.VisionMode)">
+  GetFilterValue(VisionMode)
   <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/OnVisionModeChanged.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -237,46 +173,18 @@ Class OnVisionModeChanged  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void Definition()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_ShouldTrigger_" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.ShouldTrigger*"></a>
-
-  <h3 id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_ShouldTrigger_Flow_ToolkitEngine_Vision_VisionMode_" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.ShouldTrigger(Flow,ToolkitEngine.Vision.VisionMode)">
-  ShouldTrigger(Flow, VisionMode)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/OnVisionModeChanged.cs/#L49"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override bool ShouldTrigger(Flow flow, VisionMode args)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override VisionMode GetFilterValue(VisionMode args)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>flow</code> <span class="xref">Flow</span></dt>
-    <dd></dd>
     <dt><code>args</code> <a class="xref" href="ToolkitEngine.Vision.VisionMode.html">VisionMode</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="ToolkitEngine.Vision.VisionMode.html">VisionMode</a></dt>
     <dd></dd>
   </dl>
 
@@ -294,7 +202,7 @@ Class OnVisionModeChanged  <a class="header-action link-secondary" title="View s
 
   <h3 id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_StartListeningToManager" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StartListeningToManager">
   StartListeningToManager()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/OnVisionModeChanged.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/OnVisionModeChanged.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -320,7 +228,7 @@ Class OnVisionModeChanged  <a class="header-action link-secondary" title="View s
 
   <h3 id="ToolkitEngine_Vision_VisualScripting_OnVisionModeChanged_StopListeningToManager" data-uid="ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.StopListeningToManager">
   StopListeningToManager()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/OnVisionModeChanged.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/nrvllrgrs/toolkit.vision/blob/master/Samples~/Visual Scripting/Scripts/OnVisionModeChanged.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
