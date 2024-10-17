@@ -6,35 +6,15 @@ namespace ToolkitEngine.Vision.VisualScripting
 {
 	[UnitCategory("Events/Vision")]
 	[UnitTitle("On Vision Mode Changed")]
-	public class OnVisionModeChanged : TargetEventUnit<VisionMode>
+	public class OnVisionModeChanged : FilteredTargetEventUnit<VisionMode, VisionMode>
 	{
-		#region Fields
-
-		[UnitHeaderInspectable("Filtered")]
-		public bool filtered;
-
-		[DoNotSerialize]
-		public ValueInput mode;
-
-		#endregion
-
 		#region Properties
 
-		public override Type MessageListenerType => throw new NotImplementedException();
+		public override Type MessageListenerType => typeof(OnVisionModeChangedMessageListener);
 
 		#endregion
 
 		#region Methods
-
-		protected override void Definition()
-		{
-			base.Definition();
-
-			if (filtered)
-			{
-				mode = ValueInput<VisionMode>(nameof(mode));
-			}
-		}
 
 		protected override void StartListeningToManager()
 		{
@@ -46,10 +26,7 @@ namespace ToolkitEngine.Vision.VisualScripting
 			VisionModeManager.CastInstance.Changed -= InvokeTrigger;
 		}
 
-		protected override bool ShouldTrigger(Flow flow, VisionMode args)
-		{
-			return !filtered || Equals(flow.GetValue<VisionMode>(mode), args);
-		}
+		protected override VisionMode GetFilterValue(VisionMode args) => args;
 
 		#endregion
 	}
