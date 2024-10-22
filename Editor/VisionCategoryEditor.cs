@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using UnityEditor;
 using ToolkitEngine.Vision;
 
@@ -80,12 +79,7 @@ namespace ToolkitEditor.Vision
 
 					if ((renderTypeValue & VisionCategory.RenderType.Property) != 0)
 					{
-						EditorGUILayout.LabelField("Property");
-
-						++EditorGUI.indentLevel;
-						EditorGUILayout.PropertyField(prop.FindPropertyRelative("m_propertyName"), new GUIContent("Name"));
-						EditorGUILayout.PropertyField(prop.FindPropertyRelative("m_propertyValue"), new GUIContent("Value"));
-						--EditorGUI.indentLevel;
+						EditorGUILayout.PropertyField(prop.FindPropertyRelative("m_properties"));
 					}
 
 					--EditorGUI.indentLevel;

@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using static ToolkitEngine.Vision.VisionCategory;
 
 namespace ToolkitEngine.Vision
 {
@@ -18,8 +20,13 @@ namespace ToolkitEngine.Vision
 		[SerializeField]
 		private List<Material> m_ignoredMaterials = new();
 
-		private Dictionary<Renderer, List<Material>> m_defaultMap = new();
-		private string m_modifiedPropertyName = null;
+		private Dictionary<Renderer, List<Material>> m_defaultMaterialMap = new();
+		private Dictionary<Renderer, bool> m_defaultEnabledMap = new();
+
+		/// <summary>
+		/// Map of default properties given a material
+		/// </summary>
+		private Dictionary<Material, List<PropertyData>> m_defaultPropertiesMap = new();
 
 		#endregion
 
@@ -49,26 +56,61 @@ namespace ToolkitEngine.Vision
 
 		private void Awake()
 		{
+			// Get list of properties that can change from any vision mode
+			HashSet<PropertyData> mutableProperties = new();
+			foreach (var visionMode in VisionModeManager.CastInstance.Config.modes)
+			{
+				if (!m_category.TryGetProperties(visionMode, out var properties))
+					continue;
+
+				foreach (var propertyData in properties)
+				{
+					if (string.IsNullOrWhiteSpace(propertyData.name))
+						continue;
+
+					mutableProperties.Add(new PropertyData(
+						propertyData.name,
+						propertyData.type));
+				}
+			}
+
 			foreach (var renderer in GetComponentsInChildren<Renderer>(true))
 			{
 				if (m_ignoredRenderers.Contains(renderer))
 					continue;
 
-				if ((m_category.renderType & VisionCategory.RenderType.Toggle) != 0)
-				{
-					renderer.enabled = false;
-				}
-
 				List<Material> materials = new();
+				List<PropertyData> properties = new();
 				foreach (var material in renderer.materials)
 				{
 					if (m_ignoredMaterials.Contains(material))
 						continue;
 
 					materials.Add(material);
+
+					if (!m_defaultPropertiesMap.ContainsKey(material))
+					{
+						// Get default value for mutable properties of material
+						foreach (var propertyData in mutableProperties)
+						{
+							if (!material.HasProperty(propertyData.name))
+								continue;
+
+							properties.Add(new PropertyData(
+								propertyData.name,
+								propertyData.type,
+								propertyData.GetMaterialValue(material)));
+						}
+
+						if (properties.Count > 0)
+						{
+							m_defaultPropertiesMap.Add(material, properties);
+						}
+					}
 				}
 
-				m_defaultMap.Add(renderer, materials);
+				m_defaultMaterialMap.Add(renderer, materials);
+				m_defaultEnabledMap.Add(renderer, renderer.enabled);
 			}
 		}
 
@@ -94,12 +136,12 @@ namespace ToolkitEngine.Vision
 			{
 				overridden |= SetMaterial(mode);
 				overridden |= SetMaterialProperty(mode);
-				overridden |= EnableRenderer(mode, true);
+				overridden |= EnableRenderer(mode);
 			}
 			else
 			{
-				overridden |= EnableRenderer(null, false);
-				overridden |= SetMaterialProperty(null);
+				overridden |= EnableRenderer(null);
+				overridden |= SetMaterialProperty(mode = null);
 				overridden |= SetMaterial(null);
 			}
 
@@ -116,12 +158,12 @@ namespace ToolkitEngine.Vision
 
 		private bool SetMaterial(VisionMode mode)
 		{
-			if ((m_category.renderType & VisionCategory.RenderType.Replace) == 0)
+			if ((m_category.renderType & RenderType.Replace) == 0)
 				return false;
 
 			if (mode != null && m_category.TryGetMaterial(mode, out Material material) && material != null)
 			{
-				foreach (var p in m_defaultMap)
+				foreach (var p in m_defaultMaterialMap)
 				{
 					p.Key.SetMaterials(Enumerable.Repeat(material, p.Value.Count).ToList());
 				}
@@ -129,7 +171,7 @@ namespace ToolkitEngine.Vision
 			}
 			else
 			{
-				foreach (var p in m_defaultMap)
+				foreach (var p in m_defaultMaterialMap)
 				{
 					p.Key.SetMaterials(p.Value);
 				}
@@ -139,47 +181,122 @@ namespace ToolkitEngine.Vision
 
 		private bool SetMaterialProperty(VisionMode mode)
 		{
-			if ((m_category.renderType & VisionCategory.RenderType.Property) == 0)
+			if ((m_category.renderType & RenderType.Property) == 0)
 				return false;
 
-			if (mode != null && m_category.TryGetPropertyNameAndValue(mode, out string name, out int value) && !string.IsNullOrWhiteSpace(name))
+			if (mode != null && m_category.TryGetProperties(mode, out var properties))
 			{
-				foreach (var materials in m_defaultMap.Values)
+				foreach (var propertyData in properties)
 				{
-					foreach (var material in materials)
+					foreach (var materials in m_defaultMaterialMap.Values)
 					{
-						material.SetInt(name, value);
+						SetMaterialProperty(propertyData, materials);
 					}
 				}
-				m_modifiedPropertyName = name;
 				return true;
 			}
-			else if (!string.IsNullOrEmpty(m_modifiedPropertyName))
+			// Set to default properties
+			else
 			{
-				foreach (var materials in m_defaultMap.Values)
+				var materials = m_defaultPropertiesMap.Keys;
+				foreach (var propertyDataList in m_defaultPropertiesMap.Values)
 				{
-					foreach (var material in materials)
+					foreach (var propertyData in propertyDataList)
 					{
-						material.SetInt(m_modifiedPropertyName, 0);
+						SetMaterialProperty(propertyData, materials);
 					}
 				}
-				m_modifiedPropertyName = null;
 			}
-
 			return false;
 		}
 
-		private bool EnableRenderer(VisionMode mode, bool enabled)
+		private void SetMaterialProperty(PropertyData propertyData, IEnumerable<Material> materials)
 		{
-			if ((m_category.renderType & VisionCategory.RenderType.Toggle) == 0)
+			if (propertyData == null)
+				return;
+
+			switch (propertyData.type)
+			{
+				case PropertyData.PropertyType.Color:
+					SetMaterialProperty(propertyData, materials, (material, propertyData) =>
+					{
+						material.SetColor(propertyData.name, propertyData.colorValue);
+					});
+					break;
+
+				case PropertyData.PropertyType.Boolean:
+					SetMaterialProperty(propertyData, materials, (material, propertyData) =>
+					{
+						material.SetFloat(propertyData.name, Convert.ToSingle(propertyData.boolValue));
+					});
+					break;
+
+				case PropertyData.PropertyType.Integer:
+					SetMaterialProperty(propertyData, materials, (material, propertyData) =>
+					{
+						material.SetInteger(propertyData.name, propertyData.intValue);
+					});
+					break;
+
+				case PropertyData.PropertyType.Float:
+					SetMaterialProperty(propertyData, materials, (material, propertyData) =>
+					{
+						material.SetFloat(propertyData.name, propertyData.floatValue);
+					});
+					break;
+
+				case PropertyData.PropertyType.Keyword:
+					SetMaterialProperty(propertyData, materials, (material, propertyData) =>
+					{
+						if (propertyData.boolValue)
+						{
+							material.EnableKeyword(propertyData.name);
+						}
+						else
+						{
+							material.DisableKeyword(propertyData.name);
+						}
+					});
+					break;
+
+				case PropertyData.PropertyType.Preset:
+					SetMaterialProperty(propertyData.preset.data, materials);
+					break;
+			}
+		}
+
+		private void SetMaterialProperty(PropertyData propertyData, IEnumerable<Material> materials, Action<Material, PropertyData> action)
+		{
+			foreach (var material in materials)
+			{
+				action.Invoke(material, propertyData);
+			}
+		}
+
+		private bool EnableRenderer(VisionMode mode)
+		{
+			if ((m_category.renderType & RenderType.Toggle) == 0)
 				return false;
 
-			enabled |= m_category.GetEnabled(mode);
-			foreach (var p in m_defaultMap)
+			if (mode != null)
 			{
-				p.Key.enabled = enabled;
+				bool specialized = false;
+				bool enabled = m_category.GetEnabled(mode);
+				foreach (var p in m_defaultEnabledMap)
+				{
+					p.Key.enabled = enabled;
+					specialized |= enabled != p.Value;
+				}
+				return specialized;
 			}
-			return enabled;
+			else
+			{
+				foreach (var p in m_defaultEnabledMap)
+				{
+					p.Key.enabled = p.Value;
+				}
+				return false;
+			}
 		}
 
 		#endregion

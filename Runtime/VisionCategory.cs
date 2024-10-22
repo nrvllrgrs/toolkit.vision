@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ToolkitEngine.Vision
@@ -48,17 +49,15 @@ namespace ToolkitEngine.Vision
 			return false;
 		}
 
-		public bool TryGetPropertyNameAndValue(VisionMode visionMode, out string name, out int value)
+		public bool TryGetProperties(VisionMode visionMode, out IEnumerable<PropertyData> properties)
 		{
 			if (visionMode != null && m_map.TryGetValue(visionMode, out var data))
 			{
-				name = data.propertyName;
-				value = data.propertyValue;
+				properties = data.properties;
 				return true;
 			}
 
-			name = null;
-			value = 0;
+			properties = null;
 			return false;
 		}
 
@@ -89,10 +88,7 @@ namespace ToolkitEngine.Vision
 			private bool m_enabled = true;
 
 			[SerializeField]
-			private string m_propertyName;
-
-			[SerializeField]
-			private int m_propertyValue;
+			private PropertyData[] m_properties;
 
 			#endregion
 
@@ -100,8 +96,7 @@ namespace ToolkitEngine.Vision
 
 			public Material material => m_material;
 			public bool enabled => m_enabled;
-			public string propertyName => m_propertyName;
-			public int propertyValue => m_propertyValue;
+			public PropertyData[] properties => m_properties;
 
 			#endregion
 		}
