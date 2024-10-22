@@ -7,6 +7,38 @@ references:
   commentId: N:ToolkitEditor.Vision
   fullName: ToolkitEditor.Vision
   nameWithType: ToolkitEditor.Vision
+- uid: ToolkitEditor.Vision.PropertyDataDrawer
+  name: PropertyDataDrawer
+  href: api/ToolkitEditor.Vision.PropertyDataDrawer.html
+  commentId: T:ToolkitEditor.Vision.PropertyDataDrawer
+  fullName: ToolkitEditor.Vision.PropertyDataDrawer
+  nameWithType: PropertyDataDrawer
+- uid: ToolkitEditor.Vision.PropertyDataDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
+  name: GetPropertyHeight(SerializedProperty, GUIContent)
+  href: api/ToolkitEditor.Vision.PropertyDataDrawer.html#ToolkitEditor_Vision_PropertyDataDrawer_GetPropertyHeight_SerializedProperty_GUIContent_
+  commentId: M:ToolkitEditor.Vision.PropertyDataDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
+  fullName: ToolkitEditor.Vision.PropertyDataDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
+  nameWithType: PropertyDataDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
+- uid: ToolkitEditor.Vision.PropertyDataDrawer.GetPropertyHeight*
+  name: GetPropertyHeight
+  href: api/ToolkitEditor.Vision.PropertyDataDrawer.html#ToolkitEditor_Vision_PropertyDataDrawer_GetPropertyHeight_
+  commentId: Overload:ToolkitEditor.Vision.PropertyDataDrawer.GetPropertyHeight
+  isSpec: "True"
+  fullName: ToolkitEditor.Vision.PropertyDataDrawer.GetPropertyHeight
+  nameWithType: PropertyDataDrawer.GetPropertyHeight
+- uid: ToolkitEditor.Vision.PropertyDataDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  name: OnGUI(Rect, SerializedProperty, GUIContent)
+  href: api/ToolkitEditor.Vision.PropertyDataDrawer.html#ToolkitEditor_Vision_PropertyDataDrawer_OnGUI_Rect_SerializedProperty_GUIContent_
+  commentId: M:ToolkitEditor.Vision.PropertyDataDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
+  fullName: ToolkitEditor.Vision.PropertyDataDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+  nameWithType: PropertyDataDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
+- uid: ToolkitEditor.Vision.PropertyDataDrawer.OnGUI*
+  name: OnGUI
+  href: api/ToolkitEditor.Vision.PropertyDataDrawer.html#ToolkitEditor_Vision_PropertyDataDrawer_OnGUI_
+  commentId: Overload:ToolkitEditor.Vision.PropertyDataDrawer.OnGUI
+  isSpec: "True"
+  fullName: ToolkitEditor.Vision.PropertyDataDrawer.OnGUI
+  nameWithType: PropertyDataDrawer.OnGUI
 - uid: ToolkitEditor.Vision.VisionCategoryControlEditor
   name: VisionCategoryControlEditor
   href: api/ToolkitEditor.Vision.VisionCategoryControlEditor.html
@@ -143,6 +175,256 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.IVisionModeEvents.onChanged
   nameWithType: IVisionModeEvents.onChanged
+- uid: ToolkitEngine.Vision.PropertyData
+  name: PropertyData
+  href: api/ToolkitEngine.Vision.PropertyData.html
+  commentId: T:ToolkitEngine.Vision.PropertyData
+  fullName: ToolkitEngine.Vision.PropertyData
+  nameWithType: PropertyData
+- uid: ToolkitEngine.Vision.PropertyData.#ctor
+  name: PropertyData()
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData__ctor
+  commentId: M:ToolkitEngine.Vision.PropertyData.#ctor
+  name.vb: New()
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyData()
+  fullName.vb: ToolkitEngine.Vision.PropertyData.New()
+  nameWithType: PropertyData.PropertyData()
+  nameWithType.vb: PropertyData.New()
+- uid: ToolkitEngine.Vision.PropertyData.#ctor(System.String,ToolkitEngine.Vision.PropertyData.PropertyType)
+  name: PropertyData(string, PropertyType)
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData__ctor_System_String_ToolkitEngine_Vision_PropertyData_PropertyType_
+  commentId: M:ToolkitEngine.Vision.PropertyData.#ctor(System.String,ToolkitEngine.Vision.PropertyData.PropertyType)
+  name.vb: New(String, PropertyType)
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyData(string, ToolkitEngine.Vision.PropertyData.PropertyType)
+  fullName.vb: ToolkitEngine.Vision.PropertyData.New(String, ToolkitEngine.Vision.PropertyData.PropertyType)
+  nameWithType: PropertyData.PropertyData(string, PropertyData.PropertyType)
+  nameWithType.vb: PropertyData.New(String, PropertyData.PropertyType)
+- uid: ToolkitEngine.Vision.PropertyData.#ctor(System.String,ToolkitEngine.Vision.PropertyData.PropertyType,System.Object)
+  name: PropertyData(string, PropertyType, object)
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData__ctor_System_String_ToolkitEngine_Vision_PropertyData_PropertyType_System_Object_
+  commentId: M:ToolkitEngine.Vision.PropertyData.#ctor(System.String,ToolkitEngine.Vision.PropertyData.PropertyType,System.Object)
+  name.vb: New(String, PropertyType, Object)
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyData(string, ToolkitEngine.Vision.PropertyData.PropertyType, object)
+  fullName.vb: ToolkitEngine.Vision.PropertyData.New(String, ToolkitEngine.Vision.PropertyData.PropertyType, Object)
+  nameWithType: PropertyData.PropertyData(string, PropertyData.PropertyType, object)
+  nameWithType.vb: PropertyData.New(String, PropertyData.PropertyType, Object)
+- uid: ToolkitEngine.Vision.PropertyData.#ctor*
+  name: PropertyData
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData__ctor_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyData
+  fullName.vb: ToolkitEngine.Vision.PropertyData.New
+  nameWithType: PropertyData.PropertyData
+  nameWithType.vb: PropertyData.New
+- uid: ToolkitEngine.Vision.PropertyData.GetMaterialValue(Material)
+  name: GetMaterialValue(Material)
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_GetMaterialValue_Material_
+  commentId: M:ToolkitEngine.Vision.PropertyData.GetMaterialValue(Material)
+  fullName: ToolkitEngine.Vision.PropertyData.GetMaterialValue(Material)
+  nameWithType: PropertyData.GetMaterialValue(Material)
+- uid: ToolkitEngine.Vision.PropertyData.GetMaterialValue*
+  name: GetMaterialValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_GetMaterialValue_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.GetMaterialValue
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyData.GetMaterialValue
+  nameWithType: PropertyData.GetMaterialValue
+- uid: ToolkitEngine.Vision.PropertyData.GetValue
+  name: GetValue()
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_GetValue
+  commentId: M:ToolkitEngine.Vision.PropertyData.GetValue
+  fullName: ToolkitEngine.Vision.PropertyData.GetValue()
+  nameWithType: PropertyData.GetValue()
+- uid: ToolkitEngine.Vision.PropertyData.GetValue*
+  name: GetValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_GetValue_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.GetValue
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyData.GetValue
+  nameWithType: PropertyData.GetValue
+- uid: ToolkitEngine.Vision.PropertyData.PropertyType
+  name: PropertyData.PropertyType
+  href: api/ToolkitEngine.Vision.PropertyData.PropertyType.html
+  commentId: T:ToolkitEngine.Vision.PropertyData.PropertyType
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyType
+  nameWithType: PropertyData.PropertyType
+- uid: ToolkitEngine.Vision.PropertyData.PropertyType.Boolean
+  name: Boolean
+  href: api/ToolkitEngine.Vision.PropertyData.PropertyType.html#ToolkitEngine_Vision_PropertyData_PropertyType_Boolean
+  commentId: F:ToolkitEngine.Vision.PropertyData.PropertyType.Boolean
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyType.Boolean
+  nameWithType: PropertyData.PropertyType.Boolean
+- uid: ToolkitEngine.Vision.PropertyData.PropertyType.Color
+  name: Color
+  href: api/ToolkitEngine.Vision.PropertyData.PropertyType.html#ToolkitEngine_Vision_PropertyData_PropertyType_Color
+  commentId: F:ToolkitEngine.Vision.PropertyData.PropertyType.Color
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyType.Color
+  nameWithType: PropertyData.PropertyType.Color
+- uid: ToolkitEngine.Vision.PropertyData.PropertyType.Float
+  name: Float
+  href: api/ToolkitEngine.Vision.PropertyData.PropertyType.html#ToolkitEngine_Vision_PropertyData_PropertyType_Float
+  commentId: F:ToolkitEngine.Vision.PropertyData.PropertyType.Float
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyType.Float
+  nameWithType: PropertyData.PropertyType.Float
+- uid: ToolkitEngine.Vision.PropertyData.PropertyType.Integer
+  name: Integer
+  href: api/ToolkitEngine.Vision.PropertyData.PropertyType.html#ToolkitEngine_Vision_PropertyData_PropertyType_Integer
+  commentId: F:ToolkitEngine.Vision.PropertyData.PropertyType.Integer
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyType.Integer
+  nameWithType: PropertyData.PropertyType.Integer
+- uid: ToolkitEngine.Vision.PropertyData.PropertyType.Keyword
+  name: Keyword
+  href: api/ToolkitEngine.Vision.PropertyData.PropertyType.html#ToolkitEngine_Vision_PropertyData_PropertyType_Keyword
+  commentId: F:ToolkitEngine.Vision.PropertyData.PropertyType.Keyword
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyType.Keyword
+  nameWithType: PropertyData.PropertyType.Keyword
+- uid: ToolkitEngine.Vision.PropertyData.PropertyType.Preset
+  name: Preset
+  href: api/ToolkitEngine.Vision.PropertyData.PropertyType.html#ToolkitEngine_Vision_PropertyData_PropertyType_Preset
+  commentId: F:ToolkitEngine.Vision.PropertyData.PropertyType.Preset
+  fullName: ToolkitEngine.Vision.PropertyData.PropertyType.Preset
+  nameWithType: PropertyData.PropertyType.Preset
+- uid: ToolkitEngine.Vision.PropertyData.SetValue(System.Object)
+  name: SetValue(object)
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_SetValue_System_Object_
+  commentId: M:ToolkitEngine.Vision.PropertyData.SetValue(System.Object)
+  name.vb: SetValue(Object)
+  fullName: ToolkitEngine.Vision.PropertyData.SetValue(object)
+  fullName.vb: ToolkitEngine.Vision.PropertyData.SetValue(Object)
+  nameWithType: PropertyData.SetValue(object)
+  nameWithType.vb: PropertyData.SetValue(Object)
+- uid: ToolkitEngine.Vision.PropertyData.SetValue*
+  name: SetValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_SetValue_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.SetValue
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyData.SetValue
+  nameWithType: PropertyData.SetValue
+- uid: ToolkitEngine.Vision.PropertyData.boolValue
+  name: boolValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_boolValue
+  commentId: P:ToolkitEngine.Vision.PropertyData.boolValue
+  fullName: ToolkitEngine.Vision.PropertyData.boolValue
+  nameWithType: PropertyData.boolValue
+- uid: ToolkitEngine.Vision.PropertyData.boolValue*
+  name: boolValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_boolValue_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.boolValue
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyData.boolValue
+  nameWithType: PropertyData.boolValue
+- uid: ToolkitEngine.Vision.PropertyData.colorValue
+  name: colorValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_colorValue
+  commentId: P:ToolkitEngine.Vision.PropertyData.colorValue
+  fullName: ToolkitEngine.Vision.PropertyData.colorValue
+  nameWithType: PropertyData.colorValue
+- uid: ToolkitEngine.Vision.PropertyData.colorValue*
+  name: colorValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_colorValue_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.colorValue
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyData.colorValue
+  nameWithType: PropertyData.colorValue
+- uid: ToolkitEngine.Vision.PropertyData.floatValue
+  name: floatValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_floatValue
+  commentId: P:ToolkitEngine.Vision.PropertyData.floatValue
+  fullName: ToolkitEngine.Vision.PropertyData.floatValue
+  nameWithType: PropertyData.floatValue
+- uid: ToolkitEngine.Vision.PropertyData.floatValue*
+  name: floatValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_floatValue_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.floatValue
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyData.floatValue
+  nameWithType: PropertyData.floatValue
+- uid: ToolkitEngine.Vision.PropertyData.intValue
+  name: intValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_intValue
+  commentId: P:ToolkitEngine.Vision.PropertyData.intValue
+  fullName: ToolkitEngine.Vision.PropertyData.intValue
+  nameWithType: PropertyData.intValue
+- uid: ToolkitEngine.Vision.PropertyData.intValue*
+  name: intValue
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_intValue_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.intValue
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyData.intValue
+  nameWithType: PropertyData.intValue
+- uid: ToolkitEngine.Vision.PropertyData.name
+  name: name
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_name
+  commentId: P:ToolkitEngine.Vision.PropertyData.name
+  fullName: ToolkitEngine.Vision.PropertyData.name
+  nameWithType: PropertyData.name
+- uid: ToolkitEngine.Vision.PropertyData.name*
+  name: name
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_name_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.name
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyData.name
+  nameWithType: PropertyData.name
+- uid: ToolkitEngine.Vision.PropertyData.preset
+  name: preset
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_preset
+  commentId: P:ToolkitEngine.Vision.PropertyData.preset
+  fullName: ToolkitEngine.Vision.PropertyData.preset
+  nameWithType: PropertyData.preset
+- uid: ToolkitEngine.Vision.PropertyData.preset*
+  name: preset
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_preset_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.preset
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyData.preset
+  nameWithType: PropertyData.preset
+- uid: ToolkitEngine.Vision.PropertyData.type
+  name: type
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_type
+  commentId: P:ToolkitEngine.Vision.PropertyData.type
+  fullName: ToolkitEngine.Vision.PropertyData.type
+  nameWithType: PropertyData.type
+- uid: ToolkitEngine.Vision.PropertyData.type*
+  name: type
+  href: api/ToolkitEngine.Vision.PropertyData.html#ToolkitEngine_Vision_PropertyData_type_
+  commentId: Overload:ToolkitEngine.Vision.PropertyData.type
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyData.type
+  nameWithType: PropertyData.type
+- uid: ToolkitEngine.Vision.PropertyPreset
+  name: PropertyPreset
+  href: api/ToolkitEngine.Vision.PropertyPreset.html
+  commentId: T:ToolkitEngine.Vision.PropertyPreset
+  fullName: ToolkitEngine.Vision.PropertyPreset
+  nameWithType: PropertyPreset
+- uid: ToolkitEngine.Vision.PropertyPreset.GetValue
+  name: GetValue()
+  href: api/ToolkitEngine.Vision.PropertyPreset.html#ToolkitEngine_Vision_PropertyPreset_GetValue
+  commentId: M:ToolkitEngine.Vision.PropertyPreset.GetValue
+  fullName: ToolkitEngine.Vision.PropertyPreset.GetValue()
+  nameWithType: PropertyPreset.GetValue()
+- uid: ToolkitEngine.Vision.PropertyPreset.GetValue*
+  name: GetValue
+  href: api/ToolkitEngine.Vision.PropertyPreset.html#ToolkitEngine_Vision_PropertyPreset_GetValue_
+  commentId: Overload:ToolkitEngine.Vision.PropertyPreset.GetValue
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyPreset.GetValue
+  nameWithType: PropertyPreset.GetValue
+- uid: ToolkitEngine.Vision.PropertyPreset.data
+  name: data
+  href: api/ToolkitEngine.Vision.PropertyPreset.html#ToolkitEngine_Vision_PropertyPreset_data
+  commentId: P:ToolkitEngine.Vision.PropertyPreset.data
+  fullName: ToolkitEngine.Vision.PropertyPreset.data
+  nameWithType: PropertyPreset.data
+- uid: ToolkitEngine.Vision.PropertyPreset.data*
+  name: data
+  href: api/ToolkitEngine.Vision.PropertyPreset.html#ToolkitEngine_Vision_PropertyPreset_data_
+  commentId: Overload:ToolkitEngine.Vision.PropertyPreset.data
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.PropertyPreset.data
+  nameWithType: PropertyPreset.data
 - uid: ToolkitEngine.Vision.VisionCategory
   name: VisionCategory
   href: api/ToolkitEngine.Vision.VisionCategory.html
@@ -202,22 +484,22 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.VisionCategory.TryGetMaterial
   nameWithType: VisionCategory.TryGetMaterial
-- uid: ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue(ToolkitEngine.Vision.VisionMode,System.String@,System.Int32@)
-  name: TryGetPropertyNameAndValue(VisionMode, out string, out int)
-  href: api/ToolkitEngine.Vision.VisionCategory.html#ToolkitEngine_Vision_VisionCategory_TryGetPropertyNameAndValue_ToolkitEngine_Vision_VisionMode_System_String__System_Int32__
-  commentId: M:ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue(ToolkitEngine.Vision.VisionMode,System.String@,System.Int32@)
-  name.vb: TryGetPropertyNameAndValue(VisionMode, String, Integer)
-  fullName: ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue(ToolkitEngine.Vision.VisionMode, out string, out int)
-  fullName.vb: ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue(ToolkitEngine.Vision.VisionMode, String, Integer)
-  nameWithType: VisionCategory.TryGetPropertyNameAndValue(VisionMode, out string, out int)
-  nameWithType.vb: VisionCategory.TryGetPropertyNameAndValue(VisionMode, String, Integer)
-- uid: ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue*
-  name: TryGetPropertyNameAndValue
-  href: api/ToolkitEngine.Vision.VisionCategory.html#ToolkitEngine_Vision_VisionCategory_TryGetPropertyNameAndValue_
-  commentId: Overload:ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue
+- uid: ToolkitEngine.Vision.VisionCategory.TryGetProperties(ToolkitEngine.Vision.VisionMode,System.Collections.Generic.IEnumerable{ToolkitEngine.Vision.PropertyData}@)
+  name: TryGetProperties(VisionMode, out IEnumerable<PropertyData>)
+  href: api/ToolkitEngine.Vision.VisionCategory.html#ToolkitEngine_Vision_VisionCategory_TryGetProperties_ToolkitEngine_Vision_VisionMode_System_Collections_Generic_IEnumerable_ToolkitEngine_Vision_PropertyData___
+  commentId: M:ToolkitEngine.Vision.VisionCategory.TryGetProperties(ToolkitEngine.Vision.VisionMode,System.Collections.Generic.IEnumerable{ToolkitEngine.Vision.PropertyData}@)
+  name.vb: TryGetProperties(VisionMode, IEnumerable(Of PropertyData))
+  fullName: ToolkitEngine.Vision.VisionCategory.TryGetProperties(ToolkitEngine.Vision.VisionMode, out System.Collections.Generic.IEnumerable<ToolkitEngine.Vision.PropertyData>)
+  fullName.vb: ToolkitEngine.Vision.VisionCategory.TryGetProperties(ToolkitEngine.Vision.VisionMode, System.Collections.Generic.IEnumerable(Of ToolkitEngine.Vision.PropertyData))
+  nameWithType: VisionCategory.TryGetProperties(VisionMode, out IEnumerable<PropertyData>)
+  nameWithType.vb: VisionCategory.TryGetProperties(VisionMode, IEnumerable(Of PropertyData))
+- uid: ToolkitEngine.Vision.VisionCategory.TryGetProperties*
+  name: TryGetProperties
+  href: api/ToolkitEngine.Vision.VisionCategory.html#ToolkitEngine_Vision_VisionCategory_TryGetProperties_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategory.TryGetProperties
   isSpec: "True"
-  fullName: ToolkitEngine.Vision.VisionCategory.TryGetPropertyNameAndValue
-  nameWithType: VisionCategory.TryGetPropertyNameAndValue
+  fullName: ToolkitEngine.Vision.VisionCategory.TryGetProperties
+  nameWithType: VisionCategory.TryGetProperties
 - uid: ToolkitEngine.Vision.VisionCategory.VisionModeData
   name: VisionCategory.VisionModeData
   href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html
@@ -250,32 +532,19 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.material
   nameWithType: VisionCategory.VisionModeData.material
-- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName
-  name: propertyName
-  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_propertyName
-  commentId: P:ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName
-  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName
-  nameWithType: VisionCategory.VisionModeData.propertyName
-- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName*
-  name: propertyName
-  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_propertyName_
-  commentId: Overload:ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.properties
+  name: properties
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_properties
+  commentId: P:ToolkitEngine.Vision.VisionCategory.VisionModeData.properties
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.properties
+  nameWithType: VisionCategory.VisionModeData.properties
+- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.properties*
+  name: properties
+  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_properties_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategory.VisionModeData.properties
   isSpec: "True"
-  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyName
-  nameWithType: VisionCategory.VisionModeData.propertyName
-- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue
-  name: propertyValue
-  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_propertyValue
-  commentId: P:ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue
-  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue
-  nameWithType: VisionCategory.VisionModeData.propertyValue
-- uid: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue*
-  name: propertyValue
-  href: api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html#ToolkitEngine_Vision_VisionCategory_VisionModeData_propertyValue_
-  commentId: Overload:ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue
-  isSpec: "True"
-  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.propertyValue
-  nameWithType: VisionCategory.VisionModeData.propertyValue
+  fullName: ToolkitEngine.Vision.VisionCategory.VisionModeData.properties
+  nameWithType: VisionCategory.VisionModeData.properties
 - uid: ToolkitEngine.Vision.VisionCategory.VisionModeDataMap
   name: VisionCategory.VisionModeDataMap
   href: api/ToolkitEngine.Vision.VisionCategory.VisionModeDataMap.html

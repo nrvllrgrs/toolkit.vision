@@ -1,4 +1,9 @@
 {
+  "api/ToolkitEditor.Vision.PropertyDataDrawer.html": {
+    "href": "api/ToolkitEditor.Vision.PropertyDataDrawer.html",
+    "title": "Class PropertyDataDrawer | Vision Toolkit | 1.0.0",
+    "keywords": "Class PropertyDataDrawer Namespace ToolkitEditor.Vision public class PropertyDataDrawer : PropertyDrawer Inheritance object PropertyDataDrawer Methods GetPropertyHeight(SerializedProperty, GUIContent) public override float GetPropertyHeight(SerializedProperty property, GUIContent label) Parameters property SerializedProperty label GUIContent Returns float OnGUI(Rect, SerializedProperty, GUIContent) public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) Parameters position Rect property SerializedProperty label GUIContent"
+  },
   "api/ToolkitEditor.Vision.VisionCategoryControlEditor.html": {
     "href": "api/ToolkitEditor.Vision.VisionCategoryControlEditor.html",
     "title": "Class VisionCategoryControlEditor | Vision Toolkit | 1.0.0",
@@ -22,12 +27,27 @@
   "api/ToolkitEditor.Vision.html": {
     "href": "api/ToolkitEditor.Vision.html",
     "title": "Namespace ToolkitEditor.Vision | Vision Toolkit | 1.0.0",
-    "keywords": "Namespace ToolkitEditor.Vision Classes VisionCategoryControlEditor VisionCategoryEditor"
+    "keywords": "Namespace ToolkitEditor.Vision Classes PropertyDataDrawer VisionCategoryControlEditor VisionCategoryEditor"
   },
   "api/ToolkitEngine.Vision.IVisionModeEvents.html": {
     "href": "api/ToolkitEngine.Vision.IVisionModeEvents.html",
     "title": "Interface IVisionModeEvents | Vision Toolkit | 1.0.0",
     "keywords": "Interface IVisionModeEvents Namespace ToolkitEngine.Vision public interface IVisionModeEvents Properties onChanged UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode>"
+  },
+  "api/ToolkitEngine.Vision.PropertyData.PropertyType.html": {
+    "href": "api/ToolkitEngine.Vision.PropertyData.PropertyType.html",
+    "title": "Enum PropertyData.PropertyType | Vision Toolkit | 1.0.0",
+    "keywords": "Enum PropertyData.PropertyType Namespace ToolkitEngine.Vision public enum PropertyData.PropertyType Fields Boolean = 0 Color = 1 Float = 2 Integer = 3 Keyword = 4 Preset = 5"
+  },
+  "api/ToolkitEngine.Vision.PropertyData.html": {
+    "href": "api/ToolkitEngine.Vision.PropertyData.html",
+    "title": "Class PropertyData | Vision Toolkit | 1.0.0",
+    "keywords": "Class PropertyData Namespace ToolkitEngine.Vision [Serializable] public class PropertyData Inheritance object PropertyData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors PropertyData() public PropertyData() PropertyData(string, PropertyType) public PropertyData(string name, PropertyData.PropertyType type) Parameters name string type PropertyData.PropertyType PropertyData(string, PropertyType, object) public PropertyData(string name, PropertyData.PropertyType type, object value) Parameters name string type PropertyData.PropertyType value object Properties boolValue public bool boolValue { get; } Property Value bool colorValue public Color colorValue { get; } Property Value Color floatValue public float floatValue { get; } Property Value float intValue public int intValue { get; } Property Value int name public string name { get; } Property Value string preset public PropertyPreset preset { get; } Property Value PropertyPreset type public PropertyData.PropertyType type { get; } Property Value PropertyData.PropertyType Methods GetMaterialValue(Material) public object GetMaterialValue(Material material) Parameters material Material Returns object GetValue() public object GetValue() Returns object SetValue(object) public void SetValue(object value) Parameters value object"
+  },
+  "api/ToolkitEngine.Vision.PropertyPreset.html": {
+    "href": "api/ToolkitEngine.Vision.PropertyPreset.html",
+    "title": "Class PropertyPreset | Vision Toolkit | 1.0.0",
+    "keywords": "Class PropertyPreset Namespace ToolkitEngine.Vision public class PropertyPreset : ScriptableObject Inheritance object PropertyPreset Properties data public PropertyData data { get; } Property Value PropertyData Methods GetValue() public object GetValue() Returns object"
   },
   "api/ToolkitEngine.Vision.VisionCategory.RenderType.html": {
     "href": "api/ToolkitEngine.Vision.VisionCategory.RenderType.html",
@@ -37,7 +57,7 @@
   "api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html": {
     "href": "api/ToolkitEngine.Vision.VisionCategory.VisionModeData.html",
     "title": "Class VisionCategory.VisionModeData | Vision Toolkit | 1.0.0",
-    "keywords": "Class VisionCategory.VisionModeData Namespace ToolkitEngine.Vision [Serializable] public class VisionCategory.VisionModeData Inheritance object VisionCategory.VisionModeData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties enabled public bool enabled { get; } Property Value bool material public Material material { get; } Property Value Material propertyName public string propertyName { get; } Property Value string propertyValue public int propertyValue { get; } Property Value int"
+    "keywords": "Class VisionCategory.VisionModeData Namespace ToolkitEngine.Vision [Serializable] public class VisionCategory.VisionModeData Inheritance object VisionCategory.VisionModeData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties enabled public bool enabled { get; } Property Value bool material public Material material { get; } Property Value Material properties public PropertyData[] properties { get; } Property Value PropertyData[]"
   },
   "api/ToolkitEngine.Vision.VisionCategory.VisionModeDataMap.html": {
     "href": "api/ToolkitEngine.Vision.VisionCategory.VisionModeDataMap.html",
@@ -47,7 +67,7 @@
   "api/ToolkitEngine.Vision.VisionCategory.html": {
     "href": "api/ToolkitEngine.Vision.VisionCategory.html",
     "title": "Class VisionCategory | Vision Toolkit | 1.0.0",
-    "keywords": "Class VisionCategory Namespace ToolkitEngine.Vision public class VisionCategory : ScriptableObject Inheritance object VisionCategory Properties renderType public VisionCategory.RenderType renderType { get; } Property Value VisionCategory.RenderType Methods GetEnabled(VisionMode) public bool GetEnabled(VisionMode visionMode) Parameters visionMode VisionMode Returns bool TryGetMaterial(VisionMode, out Material) public bool TryGetMaterial(VisionMode visionMode, out Material material) Parameters visionMode VisionMode material Material Returns bool TryGetPropertyNameAndValue(VisionMode, out string, out int) public bool TryGetPropertyNameAndValue(VisionMode visionMode, out string name, out int value) Parameters visionMode VisionMode name string value int Returns bool"
+    "keywords": "Class VisionCategory Namespace ToolkitEngine.Vision public class VisionCategory : ScriptableObject Inheritance object VisionCategory Properties renderType public VisionCategory.RenderType renderType { get; } Property Value VisionCategory.RenderType Methods GetEnabled(VisionMode) public bool GetEnabled(VisionMode visionMode) Parameters visionMode VisionMode Returns bool TryGetMaterial(VisionMode, out Material) public bool TryGetMaterial(VisionMode visionMode, out Material material) Parameters visionMode VisionMode material Material Returns bool TryGetProperties(VisionMode, out IEnumerable<PropertyData>) public bool TryGetProperties(VisionMode visionMode, out IEnumerable<PropertyData> properties) Parameters visionMode VisionMode properties IEnumerable<PropertyData> Returns bool"
   },
   "api/ToolkitEngine.Vision.VisionCategoryControl.html": {
     "href": "api/ToolkitEngine.Vision.VisionCategoryControl.html",
@@ -107,7 +127,7 @@
   "api/ToolkitEngine.Vision.html": {
     "href": "api/ToolkitEngine.Vision.html",
     "title": "Namespace ToolkitEngine.Vision | Vision Toolkit | 1.0.0",
-    "keywords": "Namespace ToolkitEngine.Vision Classes VisionCategory VisionCategory.VisionModeData VisionCategory.VisionModeDataMap VisionCategoryControl VisionMode VisionModeControl VisionModeEvents VisionModeManager VisionModeManagerConfig Interfaces IVisionModeEvents Enums VisionCategory.RenderType"
+    "keywords": "Namespace ToolkitEngine.Vision Classes PropertyData PropertyPreset VisionCategory VisionCategory.VisionModeData VisionCategory.VisionModeDataMap VisionCategoryControl VisionMode VisionModeControl VisionModeEvents VisionModeManager VisionModeManagerConfig Interfaces IVisionModeEvents Enums PropertyData.PropertyType VisionCategory.RenderType"
   },
   "api/index.html": {
     "href": "api/index.html",

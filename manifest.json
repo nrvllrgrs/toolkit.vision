@@ -15,6 +15,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ToolkitEditor.Vision.PropertyDataDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToolkitEditor.Vision.PropertyDataDrawer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ToolkitEditor.Vision.VisionCategoryControlEditor.yml",
       "output": {
         ".html": {
@@ -69,6 +79,36 @@
       "output": {
         ".html": {
           "relative_path": "api/ToolkitEngine.Vision.IVisionModeEvents.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ToolkitEngine.Vision.PropertyData.PropertyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToolkitEngine.Vision.PropertyData.PropertyType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ToolkitEngine.Vision.PropertyData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToolkitEngine.Vision.PropertyData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ToolkitEngine.Vision.PropertyPreset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToolkitEngine.Vision.PropertyPreset.html"
         }
       },
       "version": ""
