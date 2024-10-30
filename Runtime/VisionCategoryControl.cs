@@ -184,6 +184,16 @@ namespace ToolkitEngine.Vision
 			if ((m_category.renderType & RenderType.Property) == 0)
 				return false;
 
+			// Set to default properties before setting new values
+			var defaultMaterials = m_defaultPropertiesMap.Keys;
+			foreach (var propertyDataList in m_defaultPropertiesMap.Values)
+			{
+				foreach (var propertyData in propertyDataList)
+				{
+					SetMaterialProperty(propertyData, defaultMaterials);
+				}
+			}
+
 			if (mode != null && m_category.TryGetProperties(mode, out var properties))
 			{
 				foreach (var propertyData in properties)
@@ -194,18 +204,6 @@ namespace ToolkitEngine.Vision
 					}
 				}
 				return true;
-			}
-			// Set to default properties
-			else
-			{
-				var materials = m_defaultPropertiesMap.Keys;
-				foreach (var propertyDataList in m_defaultPropertiesMap.Values)
-				{
-					foreach (var propertyData in propertyDataList)
-					{
-						SetMaterialProperty(propertyData, materials);
-					}
-				}
 			}
 			return false;
 		}
