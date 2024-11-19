@@ -15,6 +15,9 @@ namespace ToolkitEngine.Vision
 		private VisionCategory m_category;
 
 		[SerializeField]
+		private Transform m_target;
+
+		[SerializeField]
 		private List<Renderer> m_ignoredRenderers = new();
 
 		[SerializeField]
@@ -46,6 +49,12 @@ namespace ToolkitEngine.Vision
 		#region Properties
 
 		public VisionCategory category => m_category;
+
+		/// <summary>
+		/// Collection of default materials modified by vision mode
+		/// </summary>
+		public Material[] materials => m_defaultMaterialMap.SelectMany(x => x.Value).ToArray();
+
 		public UnityEvent<VisionMode> onChanged => m_onChanged;
 		public UnityEvent onNormalized => m_onNormalized;
 		public UnityEvent onSpecialized => m_onSpecialized;
@@ -56,6 +65,11 @@ namespace ToolkitEngine.Vision
 
 		private void Awake()
 		{
+			if (m_target == null)
+			{
+				m_target = transform;
+			}
+
 			// Get list of properties that can change from any vision mode
 			HashSet<PropertyData> mutableProperties = new();
 			foreach (var visionMode in VisionModeManager.CastInstance.Config.modes)
@@ -74,7 +88,7 @@ namespace ToolkitEngine.Vision
 				}
 			}
 
-			foreach (var renderer in GetComponentsInChildren<Renderer>(true))
+			foreach (var renderer in m_target.GetComponentsInChildren<Renderer>(true))
 			{
 				if (m_ignoredRenderers.Contains(renderer))
 					continue;
