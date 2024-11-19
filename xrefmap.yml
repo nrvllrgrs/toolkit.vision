@@ -107,6 +107,12 @@ references:
   commentId: F:ToolkitEditor.Vision.VisionCategoryControlEditor.m_onSpecialized
   fullName: ToolkitEditor.Vision.VisionCategoryControlEditor.m_onSpecialized
   nameWithType: VisionCategoryControlEditor.m_onSpecialized
+- uid: ToolkitEditor.Vision.VisionCategoryControlEditor.m_target
+  name: m_target
+  href: api/ToolkitEditor.Vision.VisionCategoryControlEditor.html#ToolkitEditor_Vision_VisionCategoryControlEditor_m_target
+  commentId: F:ToolkitEditor.Vision.VisionCategoryControlEditor.m_target
+  fullName: ToolkitEditor.Vision.VisionCategoryControlEditor.m_target
+  nameWithType: VisionCategoryControlEditor.m_target
 - uid: ToolkitEditor.Vision.VisionCategoryEditor
   name: VisionCategoryEditor
   href: api/ToolkitEditor.Vision.VisionCategoryEditor.html
@@ -583,6 +589,19 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.VisionCategoryControl.category
   nameWithType: VisionCategoryControl.category
+- uid: ToolkitEngine.Vision.VisionCategoryControl.materials
+  name: materials
+  href: api/ToolkitEngine.Vision.VisionCategoryControl.html#ToolkitEngine_Vision_VisionCategoryControl_materials
+  commentId: P:ToolkitEngine.Vision.VisionCategoryControl.materials
+  fullName: ToolkitEngine.Vision.VisionCategoryControl.materials
+  nameWithType: VisionCategoryControl.materials
+- uid: ToolkitEngine.Vision.VisionCategoryControl.materials*
+  name: materials
+  href: api/ToolkitEngine.Vision.VisionCategoryControl.html#ToolkitEngine_Vision_VisionCategoryControl_materials_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategoryControl.materials
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisionCategoryControl.materials
+  nameWithType: VisionCategoryControl.materials
 - uid: ToolkitEngine.Vision.VisionCategoryControl.onChanged
   name: onChanged
   href: api/ToolkitEngine.Vision.VisionCategoryControl.html#ToolkitEngine_Vision_VisionCategoryControl_onChanged
