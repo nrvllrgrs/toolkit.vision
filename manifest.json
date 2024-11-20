@@ -225,6 +225,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ToolkitEngine.Vision.VisualScripting.GetVisionMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToolkitEngine.Vision.VisualScripting.GetVisionMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ToolkitEngine.Vision.VisualScripting.IsVisionModeNull.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ToolkitEngine.Vision.VisualScripting.IsVisionModeNull.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ToolkitEngine.Vision.VisualScripting.OnVisionModeChanged.yml",
       "output": {
         ".html": {
