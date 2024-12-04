@@ -641,6 +641,19 @@ references:
   isSpec: "True"
   fullName: ToolkitEngine.Vision.VisionCategoryControl.onSpecialized
   nameWithType: VisionCategoryControl.onSpecialized
+- uid: ToolkitEngine.Vision.VisionCategoryControl.special
+  name: special
+  href: api/ToolkitEngine.Vision.VisionCategoryControl.html#ToolkitEngine_Vision_VisionCategoryControl_special
+  commentId: P:ToolkitEngine.Vision.VisionCategoryControl.special
+  fullName: ToolkitEngine.Vision.VisionCategoryControl.special
+  nameWithType: VisionCategoryControl.special
+- uid: ToolkitEngine.Vision.VisionCategoryControl.special*
+  name: special
+  href: api/ToolkitEngine.Vision.VisionCategoryControl.html#ToolkitEngine_Vision_VisionCategoryControl_special_
+  commentId: Overload:ToolkitEngine.Vision.VisionCategoryControl.special
+  isSpec: "True"
+  fullName: ToolkitEngine.Vision.VisionCategoryControl.special
+  nameWithType: VisionCategoryControl.special
 - uid: ToolkitEngine.Vision.VisionMode
   name: VisionMode
   href: api/ToolkitEngine.Vision.VisionMode.html

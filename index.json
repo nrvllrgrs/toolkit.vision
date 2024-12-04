@@ -72,7 +72,7 @@
   "api/ToolkitEngine.Vision.VisionCategoryControl.html": {
     "href": "api/ToolkitEngine.Vision.VisionCategoryControl.html",
     "title": "Class VisionCategoryControl | Vision Toolkit | 1.0.0",
-    "keywords": "Class VisionCategoryControl Namespace ToolkitEngine.Vision public class VisionCategoryControl : MonoBehaviour, IVisionModeEvents Inheritance object VisionCategoryControl Implements IVisionModeEvents Properties category public VisionCategory category { get; } Property Value VisionCategory materials Collection of default materials modified by vision mode public Material[] materials { get; } Property Value Material[] onChanged public UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode> onNormalized public UnityEvent onNormalized { get; } Property Value UnityEvent onSpecialized public UnityEvent onSpecialized { get; } Property Value UnityEvent"
+    "keywords": "Class VisionCategoryControl Namespace ToolkitEngine.Vision public class VisionCategoryControl : MonoBehaviour, IVisionModeEvents Inheritance object VisionCategoryControl Implements IVisionModeEvents Properties category public VisionCategory category { get; set; } Property Value VisionCategory materials Collection of default materials modified by vision mode public Material[] materials { get; } Property Value Material[] onChanged public UnityEvent<VisionMode> onChanged { get; } Property Value UnityEvent<VisionMode> onNormalized public UnityEvent onNormalized { get; } Property Value UnityEvent onSpecialized public UnityEvent onSpecialized { get; } Property Value UnityEvent special public bool special { get; } Property Value bool"
   },
   "api/ToolkitEngine.Vision.VisionMode.html": {
     "href": "api/ToolkitEngine.Vision.VisionMode.html",
