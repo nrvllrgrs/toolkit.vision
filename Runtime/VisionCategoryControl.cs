@@ -23,13 +23,14 @@ namespace ToolkitEngine.Vision
 		[SerializeField]
 		private List<Material> m_ignoredMaterials = new();
 
-		private Dictionary<Renderer, List<Material>> m_defaultMaterialMap = new();
-		private Dictionary<Renderer, bool> m_defaultEnabledMap = new();
+		private Dictionary<Renderer, List<Material>> m_defaultMaterialMap;
+		private Dictionary<Renderer, bool> m_defaultEnabledMap;
 
 		/// <summary>
 		/// Map of default properties given a material
 		/// </summary>
-		private Dictionary<Material, List<PropertyData>> m_defaultPropertiesMap = new();
+		private Dictionary<Material, List<PropertyData>> m_defaultPropertiesMap;
+		private bool m_special = false;
 
 		#endregion
 
@@ -48,7 +49,51 @@ namespace ToolkitEngine.Vision
 
 		#region Properties
 
-		public VisionCategory category => m_category;
+		public VisionCategory category
+		{
+			get => m_category;
+			set
+			{
+				// No change, skip
+				if (m_category == value)
+					return;
+
+				m_category = value;
+
+				if (m_special)
+				{
+					// Reset to default properties
+					EnableRenderer(null);
+					SetMaterialProperty(null);
+					SetMaterial(null);
+				}
+
+				UpdateMutableProperties();
+				Changed(null, VisionModeManager.CastInstance.activeMode);
+			}
+		}
+
+		public bool special
+		{
+			get => m_special;
+			private set
+			{
+				// No change, skip
+				if (m_special == value)
+					return;
+
+				m_special = value;
+
+				if (value)
+				{
+					m_onSpecialized?.Invoke();
+				}
+				else
+				{
+					m_onNormalized?.Invoke();
+				}
+			}
+		}
 
 		/// <summary>
 		/// Collection of default materials modified by vision mode
@@ -69,6 +114,15 @@ namespace ToolkitEngine.Vision
 			{
 				m_target = transform;
 			}
+
+			UpdateMutableProperties();
+		}
+
+		private void UpdateMutableProperties()
+		{
+			m_defaultMaterialMap = new();
+			m_defaultEnabledMap = new();
+			m_defaultPropertiesMap = new();
 
 			// Get list of properties that can change from any vision mode
 			HashSet<PropertyData> mutableProperties = new();
@@ -160,14 +214,7 @@ namespace ToolkitEngine.Vision
 			}
 
 			m_onChanged?.Invoke(mode);
-			if (overridden)
-			{
-				m_onSpecialized?.Invoke();
-			}
-			else
-			{
-				m_onNormalized?.Invoke();
-			}
+			special = overridden;
 		}
 
 		private bool SetMaterial(VisionMode mode)
