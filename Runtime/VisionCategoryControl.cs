@@ -213,8 +213,8 @@ namespace ToolkitEngine.Vision
 				overridden |= SetMaterial(null);
 			}
 
-			m_onChanged?.Invoke(mode);
 			special = overridden;
+			m_onChanged?.Invoke(mode);
 		}
 
 		private bool SetMaterial(VisionMode mode)
