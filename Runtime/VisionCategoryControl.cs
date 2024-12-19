@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -18,10 +19,7 @@ namespace ToolkitEngine.Vision
 		private Transform m_target;
 
 		[SerializeField]
-		private List<Renderer> m_ignoredRenderers = new();
-
-		[SerializeField]
-		private List<Material> m_ignoredMaterials = new();
+		private RendererMaterialsMap m_includedRenderers = new();
 
 		private Dictionary<Renderer, List<Material>> m_defaultMaterialMap;
 		private Dictionary<Renderer, bool> m_defaultEnabledMap;
@@ -115,6 +113,14 @@ namespace ToolkitEngine.Vision
 				m_target = transform;
 			}
 
+			if (!m_includedRenderers.Any())
+			{
+				foreach (var renderer in m_target.GetComponentsInChildren<Renderer>(true))
+				{
+					m_includedRenderers.Add(renderer, new MaterialCollection(renderer.materials));
+				}
+			}
+
 			UpdateMutableProperties();
 		}
 
@@ -142,18 +148,12 @@ namespace ToolkitEngine.Vision
 				}
 			}
 
-			foreach (var renderer in m_target.GetComponentsInChildren<Renderer>(true))
+			foreach (var p in m_includedRenderers)
 			{
-				if (m_ignoredRenderers.Contains(renderer))
-					continue;
-
 				List<Material> materials = new();
 				List<PropertyData> properties = new();
-				foreach (var material in renderer.materials)
+				foreach (var material in (IEnumerable<Material>)p.Value)
 				{
-					if (m_ignoredMaterials.Contains(material))
-						continue;
-
 					materials.Add(material);
 
 					if (!m_defaultPropertiesMap.ContainsKey(material))
@@ -177,8 +177,8 @@ namespace ToolkitEngine.Vision
 					}
 				}
 
-				m_defaultMaterialMap.Add(renderer, materials);
-				m_defaultEnabledMap.Add(renderer, renderer.enabled);
+				m_defaultMaterialMap.Add(p.Key, materials);
+				m_defaultEnabledMap.Add(p.Key, p.Key.enabled);
 			}
 		}
 
@@ -357,6 +357,68 @@ namespace ToolkitEngine.Vision
 				return false;
 			}
 		}
+
+		#endregion
+
+		#region Editor-Only
+#if UNITY_EDITOR
+
+		[ContextMenu("Populate Renderers")]
+		private void PopulateRenderers()
+		{
+			m_includedRenderers.Clear();
+
+			var target = m_target;
+			if (target == null)
+			{
+				target = transform;
+			}
+
+			foreach (var renderer in target.GetComponentsInChildren<Renderer>(true))
+			{
+				List<Material> materials = new();
+				renderer.GetSharedMaterials(materials);
+				m_includedRenderers.Add(renderer, new MaterialCollection(materials));
+			}
+		}
+
+#endif
+		#endregion
+	}
+
+	[Serializable]
+	public class RendererMaterialsMap : SerializableDictionary<Renderer, MaterialCollection>
+	{ }
+
+	[Serializable]
+	public class MaterialCollection : IEnumerable<Material>
+	{
+		#region Fields
+
+		[SerializeField]
+		private List<Material> m_materials;
+
+		#endregion
+
+		#region Constructors
+
+		public MaterialCollection()
+		{ }
+
+		public MaterialCollection(IEnumerable<Material> materials)
+		{
+			m_materials = new List<Material>(materials);
+		}
+
+		#endregion
+
+		#region Methods
+
+		public IEnumerator GetEnumerator() => m_materials.GetEnumerator();
+
+		IEnumerator<Material> IEnumerable<Material>.GetEnumerator() => ((IEnumerable<Material>)m_materials).GetEnumerator();
+
+		IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable)m_materials).GetEnumerator();
 
 		#endregion
 	}

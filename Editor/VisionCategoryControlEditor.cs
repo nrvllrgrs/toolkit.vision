@@ -10,8 +10,7 @@ namespace ToolkitEditor.Vision
 
 		protected SerializedProperty m_category;
 		protected SerializedProperty m_target;
-		protected SerializedProperty m_ignoredRenderers;
-		protected SerializedProperty m_ignoredMaterials;
+		protected SerializedProperty m_includedRenderers;
 		protected SerializedProperty m_onChanged;
 		protected SerializedProperty m_onNormalized;
 		protected SerializedProperty m_onSpecialized;
@@ -24,8 +23,7 @@ namespace ToolkitEditor.Vision
 		{
 			m_category = serializedObject.FindProperty(nameof(m_category));
 			m_target = serializedObject.FindProperty(nameof(m_target));
-			m_ignoredRenderers = serializedObject.FindProperty(nameof (m_ignoredRenderers));
-			m_ignoredMaterials = serializedObject.FindProperty(nameof(m_ignoredMaterials));
+			m_includedRenderers = serializedObject.FindProperty(nameof(m_includedRenderers));
 			m_onChanged = serializedObject.FindProperty(nameof (m_onChanged));
 			m_onNormalized = serializedObject.FindProperty(nameof(m_onNormalized));
 			m_onSpecialized = serializedObject.FindProperty(nameof(m_onSpecialized));
@@ -35,8 +33,7 @@ namespace ToolkitEditor.Vision
 		{
 			EditorGUILayout.PropertyField(m_category);
 			EditorGUILayout.PropertyField(m_target);
-			EditorGUILayout.PropertyField(m_ignoredRenderers);
-			EditorGUILayout.PropertyField(m_ignoredMaterials);
+			EditorGUILayout.PropertyField(m_includedRenderers);
 		}
 
 		protected override void DrawEvents()
